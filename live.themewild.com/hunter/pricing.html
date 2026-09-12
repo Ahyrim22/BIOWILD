@@ -1,474 +1,3944 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from live.themewild.com/hunter/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Jun 2026 20:38:38 GMT -->
 <head>
-    <!-- meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
 
-    <!-- title -->
-    <title>BioWild - Bird Sanctuary</title>
+    <!-- =========================================================
+         META TAGS
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Support BioWild through bird sponsorship plans and help fund wildlife care, conservation, environmental education, and habitat protection in Panama.">
+
+    <meta name="keywords"
+        content="BioWild, bird sanctuary Panama, bird sponsorship, wildlife donation, conservation Panama, adopt a bird, bird sanctuary plans">
+
+    <title>BioWild - Support Our Birds</title>
+
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
 
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/nice-select.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon"
+        type="image/x-icon"
+        href="assets/img/logo/favicon.png">
+
+
+    <!-- =========================================================
+         CSS
+    ========================================================== -->
+
+    <link rel="stylesheet"
+        href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/all-fontawesome.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/animate.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/magnific-popup.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/owl.carousel.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/jquery-ui.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/nice-select.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/style.css">
+
+
+    <!-- =========================================================
+         CUSTOM PRICING CSS
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .support-hero {
+            position: relative;
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(17, 55, 35, .95),
+                    rgba(17, 55, 35, .72),
+                    rgba(17, 55, 35, .18)
+                ),
+                url("assets/img/blog/01.jpg") center/cover no-repeat;
+        }
+
+        .support-hero-content {
+            max-width: 720px;
+            color: white;
+        }
+
+        .support-hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 16px;
+
+            border-radius: 50px;
+
+            background: rgba(216,239,143,.12);
+
+            border: 1px solid rgba(216,239,143,.3);
+
+            color: #d8ef8f;
+
+            text-transform: uppercase;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+        }
+
+        .support-hero-content h1 {
+            color: #fff;
+            font-size: 62px;
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+
+        .support-hero-content h1 span {
+            color: #d8ef8f;
+        }
+
+        .support-hero-content p {
+            color: rgba(255,255,255,.82);
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 650px;
+        }
+
+        .hero-actions {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 14px 25px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .hero-btn.primary {
+            background: #d8ef8f;
+            color: #173c29;
+        }
+
+        .hero-btn.secondary {
+            border: 1px solid rgba(255,255,255,.4);
+            color: white;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-btn.secondary:hover {
+            background: white;
+            color: #173c29;
+        }
+
+
+        /* =====================================================
+           IMPACT BAR
+        ====================================================== */
+
+        .impact-bar {
+            position: relative;
+            margin-top: -50px;
+            z-index: 5;
+        }
+
+        .impact-box {
+            background: white;
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 45px rgba(0,0,0,.09);
+
+            padding: 30px;
+        }
+
+        .impact-item {
+            text-align: center;
+            padding: 10px 15px;
+        }
+
+        .impact-item + .impact-item {
+            border-left: 1px solid #e5ece1;
+        }
+
+        .impact-item i {
+            font-size: 24px;
+            color: #71923b;
+            margin-bottom: 9px;
+        }
+
+        .impact-item h4 {
+            margin-bottom: 4px;
+        }
+
+        .impact-item p {
+            margin: 0;
+            font-size: 13px;
+            color: #777;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .support-intro {
+            padding: 115px 0 90px;
+            background: white;
+        }
+
+        .support-intro p {
+            color: #666;
+            line-height: 1.85;
+        }
+
+        .intro-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            margin-top: 20px;
+        }
+
+        .intro-point-icon {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #d8ef8f;
+            color: #173c29;
+        }
+
+        .intro-point h5 {
+            margin-bottom: 5px;
+        }
+
+        .intro-point p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .support-intro-image {
+            position: relative;
+            border-radius: 22px;
+            overflow: hidden;
+        }
+
+        .support-intro-image img {
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+        }
+
+        .image-badge {
+            position: absolute;
+            left: 25px;
+            bottom: 25px;
+
+            padding: 18px 20px;
+
+            border-radius: 14px;
+
+            background: #173c29;
+
+            color: white;
+
+            box-shadow: 0 12px 35px rgba(0,0,0,.2);
+        }
+
+        .image-badge strong {
+            color: #d8ef8f;
+            display: block;
+            font-size: 23px;
+        }
+
+        .image-badge span {
+            color: rgba(255,255,255,.72);
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           BILLING TOGGLE
+        ====================================================== */
+
+        .plans-area {
+            padding: 115px 0;
+            background: #f5f9f2;
+        }
+
+        .billing-toggle-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+
+            margin-bottom: 45px;
+        }
+
+        .billing-label {
+            font-weight: 700;
+            color: #31542f;
+        }
+
+        .billing-toggle {
+            position: relative;
+            width: 66px;
+            height: 34px;
+        }
+
+        .billing-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .billing-slider {
+            position: absolute;
+            inset: 0;
+
+            border-radius: 50px;
+
+            background: #31542f;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .billing-slider:before {
+            content: "";
+
+            position: absolute;
+
+            width: 26px;
+            height: 26px;
+
+            left: 4px;
+            top: 4px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            transition: .3s;
+        }
+
+        .billing-toggle input:checked
+        + .billing-slider:before {
+            transform: translateX(32px);
+        }
+
+        .save-badge {
+            padding: 5px 11px;
+            border-radius: 50px;
+            background: #d8ef8f;
+            color: #31542f;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           PLAN CARDS
+        ====================================================== */
+
+        .support-plan {
+            position: relative;
+
+            height: 100%;
+
+            border-radius: 20px;
+
+            background: white;
+
+            padding: 38px 32px;
+
+            box-shadow:
+                0 9px 35px rgba(0,0,0,.055);
+
+            transition: .35s ease;
+
+            overflow: hidden;
+        }
+
+        .support-plan:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.1);
+        }
+
+        .support-plan.featured {
+            transform: translateY(-16px);
+
+            border: 2px solid #71923b;
+
+            box-shadow:
+                0 20px 55px rgba(49,84,47,.17);
+        }
+
+        .support-plan.featured:hover {
+            transform: translateY(-22px);
+        }
+
+        .featured-ribbon {
+            position: absolute;
+
+            top: 20px;
+            right: -42px;
+
+            width: 170px;
+
+            padding: 7px 0;
+
+            text-align: center;
+
+            background: #31542f;
+
+            color: white;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            transform: rotate(45deg);
+
+            letter-spacing: .6px;
+        }
+
+        .plan-icon {
+            width: 68px;
+            height: 68px;
+
+            border-radius: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #edf5e7;
+
+            color: #31542f;
+
+            font-size: 29px;
+
+            margin-bottom: 24px;
+        }
+
+        .featured .plan-icon {
+            background: #d8ef8f;
+        }
+
+        .support-plan h3 {
+            margin-bottom: 8px;
+        }
+
+        .plan-subtitle {
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            min-height: 68px;
+        }
+
+        .plan-price {
+            display: flex;
+            align-items: baseline;
+
+            gap: 5px;
+
+            margin: 22px 0;
+        }
+
+        .plan-price strong {
+            color: #173c29;
+            font-size: 48px;
+            line-height: 1;
+        }
+
+        .plan-price span {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .annual-price {
+            display: none;
+        }
+
+        .pricing-note {
+            background: #f3f7ef;
+            padding: 12px 14px;
+            border-radius: 10px;
+
+            font-size: 12px;
+            color: #5f705e;
+
+            margin-bottom: 23px;
+        }
+
+        .plan-button {
+            width: 100%;
+
+            border: none;
+
+            border-radius: 50px;
+
+            padding: 13px 20px;
+
+            background: #173c29;
+
+            color: white;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+        .plan-button:hover {
+            background: #315f43;
+
+            transform: translateY(-2px);
+        }
+
+        .featured .plan-button {
+            background: #71923b;
+        }
+
+        .plan-features {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 28px 0 0;
+        }
+
+        .plan-features li {
+            display: flex;
+            gap: 10px;
+
+            margin-bottom: 14px;
+
+            color: #5f665f;
+
+            font-size: 14px;
+
+            line-height: 1.55;
+        }
+
+        .plan-features i {
+            color: #71923b;
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           COMPARISON
+        ====================================================== */
+
+        .comparison-area {
+            padding: 115px 0;
+            background: white;
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,.06);
+        }
+
+        .comparison-table {
+            min-width: 850px;
+
+            background: white;
+
+            margin: 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 17px 20px;
+
+            border-bottom: 1px solid #ebefea;
+
+            vertical-align: middle;
+        }
+
+        .comparison-table thead th {
+            background: #173c29;
+            color: white;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #f7faf5;
+        }
+
+        .comparison-check {
+            color: #71923b;
+            font-size: 18px;
+        }
+
+        .comparison-x {
+            color: #b8bdb7;
+        }
+
+
+        /* =====================================================
+           IMPACT CALCULATOR
+        ====================================================== */
+
+        .calculator-area {
+            padding: 115px 0;
+            background: #f5f9f2;
+        }
+
+        .calculator-box {
+            max-width: 950px;
+            margin: auto;
+
+            border-radius: 24px;
+
+            padding: 50px;
+
+            background: #173c29;
+
+            color: white;
+
+            box-shadow:
+                0 20px 55px rgba(0,0,0,.13);
+        }
+
+        .calculator-box h2 {
+            color: white;
+        }
+
+        .calculator-box p {
+            color: rgba(255,255,255,.72);
+        }
+
+        .range-wrapper {
+            margin-top: 35px;
+        }
+
+        .range-wrapper label {
+            color: #d8ef8f;
+            font-weight: 700;
+        }
+
+        .support-range {
+            width: 100%;
+            margin-top: 15px;
+            accent-color: #d8ef8f;
+        }
+
+        .support-amount {
+            text-align: center;
+
+            margin: 20px 0;
+
+            font-size: 54px;
+
+            color: #d8ef8f;
+
+            font-weight: 800;
+        }
+
+        .impact-result {
+            padding: 23px;
+
+            border-radius: 14px;
+
+            background: rgba(255,255,255,.08);
+
+            margin-top: 25px;
+
+            text-align: center;
+        }
+
+        .impact-result strong {
+            display: block;
+
+            color: #d8ef8f;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ====================================================== */
+
+        .pricing-faq {
+            padding: 110px 0;
+            background: white;
+        }
+
+        .pricing-faq-item {
+            background: #f7faf5;
+
+            border-radius: 13px;
+
+            margin-bottom: 12px;
+
+            overflow: hidden;
+        }
+
+        .pricing-faq-question {
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            padding: 18px 20px;
+
+            text-align: left;
+
+            font-weight: 700;
+
+            color: #263d2c;
+        }
+
+        .pricing-faq-answer {
+            display: none;
+
+            padding: 0 20px 20px;
+
+            color: #666;
+
+            line-height: 1.75;
+        }
+
+        .pricing-faq-answer.show {
+            display: block;
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .support-cta {
+            padding: 90px 0;
+
+            background: #d8ef8f;
+        }
+
+        .support-cta h2 {
+            color: #173c29;
+        }
+
+        .support-cta p {
+            color: #39583d;
+        }
+
+        .support-cta-buttons {
+            display: flex;
+
+            justify-content: flex-end;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+
+        .support-cta-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 14px 24px;
+
+            border-radius: 50px;
+
+            background: #173c29;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+        .support-cta-btn.light {
+            background: white;
+            color: #173c29;
+        }
+
+        .support-cta-btn:hover {
+            transform: translateY(-3px);
+
+            color: white;
+        }
+
+        .support-cta-btn.light:hover {
+            color: #173c29;
+        }
+
+
+        /* =====================================================
+           MODAL
+        ====================================================== */
+
+        .sponsor-modal .modal-content {
+            border: none;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .sponsor-modal-header {
+            background: #173c29;
+
+            color: white;
+
+            padding: 26px;
+        }
+
+        .sponsor-modal-header h4 {
+            color: white;
+
+            margin: 0;
+        }
+
+        .modal-plan-summary {
+            background: #f5f9f2;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .modal-plan-summary strong {
+            color: #31542f;
+
+            font-size: 24px;
+        }
+
+        .modal-submit {
+            width: 100%;
+
+            border: none;
+
+            background: #31542f;
+
+            color: white;
+
+            padding: 13px;
+
+            border-radius: 50px;
+
+            font-weight: 700;
+        }
+
+        .modal-success {
+            display: none;
+
+            padding: 20px;
+
+            border-radius: 12px;
+
+            background: #e8f5dc;
+
+            color: #31542f;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media(max-width:991px) {
+
+            .support-hero-content h1 {
+                font-size: 48px;
+            }
+
+            .intro-content {
+                padding-left: 0;
+
+                margin-top: 35px;
+            }
+
+            .support-plan.featured {
+                transform: none;
+            }
+
+            .support-plan.featured:hover {
+                transform: translateY(-8px);
+            }
+
+            .calculator-box {
+                padding: 40px 28px;
+            }
+
+            .support-cta-buttons {
+                justify-content: flex-start;
+
+                margin-top: 25px;
+            }
+
+        }
+
+        @media(max-width:575px) {
+
+            .support-hero {
+                min-height: 590px;
+            }
+
+            .support-hero-content h1 {
+                font-size: 38px;
+            }
+
+            .support-hero-content p {
+                font-size: 15px;
+            }
+
+            .impact-item + .impact-item {
+                border-left: none;
+
+                border-top: 1px solid #e5ece1;
+            }
+
+            .impact-item {
+                padding: 17px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-    <!-- preloader -->
+
+    <!-- =========================================================
+         PRELOADER
+    ========================================================== -->
+
     <div class="preloader">
+
         <div class="loader-ripple">
+
             <div></div>
             <div></div>
+
         </div>
+
     </div>
-    <!-- preloader end -->
 
 
-    <!-- header area -->
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
     <header class="header">
-        <!-- top header -->
+
+
+        <!-- TOP HEADER -->
+
         <div class="header-top">
+
             <div class="container">
+
                 <div class="header-top-wrapper">
+
+
                     <div class="header-top-left">
+
                         <div class="header-top-contact">
+
                             <ul>
-                                <li><a href="mailto:biowild2026@outlook.com"><i class="far fa-envelopes"></i>
-                                        biowild2026@outlook.com</a></li>
-                                <li><a href="tel:+21236547898"><i class="far fa-phone-volume"></i> +2 123 654 7898</a>
+
+
+                                <li>
+
+                                    <a href="mailto:biowild2026@outlook.com">
+
+                                        <i class="far fa-envelopes"></i>
+
+                                        biowild2026@outlook.com
+
+                                    </a>
+
                                 </li>
-                                <li><a href="#"><i class="far fa-alarm-clock"></i> Mon - Fri (08AM - 8PM)</a></li>
+
+
+                                <li>
+
+                                    <a href="tel:+50761533665">
+
+                                        <i class="far fa-phone-volume"></i>
+
+                                        +507 6153-3665
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="#">
+
+                                        <i class="far fa-alarm-clock"></i>
+
+                                        Mon - Fri (08AM - 8PM)
+
+                                    </a>
+
+                                </li>
+
+
                             </ul>
+
                         </div>
+
                     </div>
+
+
                     <div class="header-top-right">
-                        <div class="header-top-lang">
-                            <div class="dropdown">
-                                <a href="#" class="top-lang dropdown-toggle" data-bs-toggle="dropdown"><i class="fal fa-globe"></i> Language</a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                  <li><a class="dropdown-item" href="#">English</a></li>
-                                  <li><a class="dropdown-item" href="#">German</a></li>
-                                  <li><a class="dropdown-item" href="#">Russian</a></li>
-                                  <li><a class="dropdown-item" href="#">Spanish</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="header-top-social">
-                            <span>Follow Us: </span>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-x-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                            <span>
+                                Follow Us:
+                            </span>
+
+
+                            <a href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+
+
+                            <a href="#">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+
+
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+
+                            <a href="#">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
+
+        <!-- NAVIGATION -->
+
         <div class="main-navigation">
+
             <nav class="navbar navbar-expand-lg">
+
                 <div class="container position-relative">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo/logo.png" alt="logo">
+
+
+                    <!-- LOGO -->
+
+                    <a class="navbar-brand"
+                        href="index.html">
+
+                        <img src="assets/img/logo/logo.png"
+                            alt="BioWild Logo">
+
                     </a>
+
+
+                    <!-- MOBILE -->
+
                     <div class="mobile-menu-right">
+
+
                         <div class="search-btn">
-                            <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+
+                            <button type="button"
+                                class="nav-right-link search-box-outer">
+
+                                <i class="far fa-search"></i>
+
+                            </button>
+
                         </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-mobile-icon"><i class="far fa-bars"></i></span>
+
+
+                        <button class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#main_nav"
+                            aria-expanded="false">
+
+                            <span class="navbar-toggler-mobile-icon">
+
+                                <i class="far fa-bars"></i>
+
+                            </span>
+
                         </button>
+
+
                     </div>
-                    <div class="collapse navbar-collapse" id="main_nav">
+
+
+                    <!-- NAV -->
+
+                    <div class="collapse navbar-collapse"
+                        id="main_nav">
+
+
                         <ul class="navbar-nav">
-                            
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+
+                            <li class="nav-item">
+
+                                <a class="nav-link"
+                                    href="index.html">
+
+                                    Home
+
+                                </a>
+
+                            </li>
+
+
+                            <li class="nav-item">
+
+                                <a class="nav-link"
+                                    href="about.html">
+
+                                    About
+
+                                </a>
+
+                            </li>
+
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+
+                                <a class="nav-link dropdown-toggle"
+                                    href="#"
+                                    data-bs-toggle="dropdown">
+
+                                    Services
+
+                                </a>
+
+
                                 <ul class="dropdown-menu fade-down">
-                                    <li><a class="dropdown-item" href="service.html">Services One</a></li>
-                                    <li><a class="dropdown-item" href="service-2.html">Services Two</a></li>
-                                    <li><a class="dropdown-item" href="service-single.html">Service Single</a></li>
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="service-single.html">
+
+                                            Our Services
+
+                                        </a>
+
+                                    </li>
+
                                 </ul>
+
                             </li>
+
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+
+                                <a class="nav-link dropdown-toggle"
+                                    href="#"
+                                    data-bs-toggle="dropdown">
+
+                                    Pages
+
+                                </a>
+
+
                                 <ul class="dropdown-menu fade-down">
-                                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                                    <li><a class="dropdown-item" href="team.html">Our Team</a></li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#">Portfolio</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
-                                            <li><a class="dropdown-item" href="portfolio-single.html">Portfolio Single</a>
-                                            </li>
-                                        </ul>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="team.html">
+
+                                            Our Team
+
+                                        </a>
+
                                     </li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#">Authentication</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="login.html">Login</a></li>
-                                            <li><a class="dropdown-item" href="register.html">Register</a></li>
-                                            <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                                            </li>
-                                        </ul>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="portfolio.html">
+
+                                            Portfolio
+
+                                        </a>
+
                                     </li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#">Extra Pages</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="404.html">404 Error</a></li>
-                                            <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
-                                            <li><a class="dropdown-item" href="terms.html">Terms Of Service</a></li>
-                                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
-                                        </ul>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="gallery.html">
+
+                                            Gallery
+
+                                        </a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="destination.html">Destination</a></li>
-                                    <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
-                                    <li><a class="dropdown-item" href="pricing.html">Pricing Plan</a></li>
-                                    <li><a class="dropdown-item" href="faq.html">Faq</a></li>
-                                    <li><a class="dropdown-item" href="testimonial.html">Testimonials</a></li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item active"
+                                            href="pricing.html">
+
+                                            Support Plans
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="faq.html">
+
+                                            FAQ
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="testimonial.html">
+
+                                            Testimonials
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="terms.html">
+
+                                            Terms Of Service
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="privacy.html">
+
+                                            Privacy Policy
+
+                                        </a>
+
+                                    </li>
+
+
                                 </ul>
+
                             </li>
+
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
+
+                                <a class="nav-link dropdown-toggle"
+                                    href="#"
+                                    data-bs-toggle="dropdown">
+
+                                    Shop
+
+                                </a>
+
+
                                 <ul class="dropdown-menu fade-down">
-                                    <li><a class="dropdown-item" href="shop.html">Shop</a></li>
-                                    <li><a class="dropdown-item" href="shop-cart.html">Shop Cart</a></li>
-                                    <li><a class="dropdown-item" href="shop-checkout.html">Shop Checkout</a></li>
-                                    <li><a class="dropdown-item" href="shop-single.html">Shop Single</a></li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="shop.html">
+
+                                            Shop
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="shop-cart.html">
+
+                                            Shop Cart
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="shop-checkout.html">
+
+                                            Shop Checkout
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a class="dropdown-item"
+                                            href="shop-single.html">
+
+                                            Shop Single
+
+                                        </a>
+
+                                    </li>
+
+
                                 </ul>
+
                             </li>
-                            <li class="nav-item dropdown">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Volunteering</a></li>
+
+
+                            <li class="nav-item">
+
+                                <a class="nav-link"
+                                    href="volunteering.html">
+
+                                    Volunteering
+
+                                </a>
+
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+
+                            <li class="nav-item">
+
+                                <a class="nav-link"
+                                    href="contact.html">
+
+                                    Contact
+
+                                </a>
+
+                            </li>
+
+
                         </ul>
+
+
+                        <!-- RIGHT -->
+
                         <div class="nav-right">
-                            
+
+
                             <div class="cart-btn">
-                                <a href="#" class="nav-right-link"><i class="far fa-cart-plus"></i><span>0</span></a>
+
+                                <a href="shop-cart.html"
+                                    class="nav-right-link">
+
+                                    <i class="far fa-cart-plus"></i>
+
+                                    <span>0</span>
+
+                                </a>
+
                             </div>
+
+
                             <div class="nav-right-btn">
-                                <a href="#" class="theme-btn">Buy a Ticket<i class="fas fa-arrow-right"></i></a>
+
+                                <a href="#plans"
+                                    class="theme-btn">
+
+                                    Support a Bird
+
+                                    <i class="fas fa-heart"></i>
+
+                                </a>
+
                             </div>
+
+
                             <div class="sidebar-btn">
-                                <button type="button" class="nav-right-link"><i class="far fa-bars-sort"></i></button>
+
+                                <button type="button"
+                                    class="nav-right-link">
+
+                                    <i class="far fa-bars-sort"></i>
+
+                                </button>
+
                             </div>
+
+
                         </div>
+
                     </div>
+
                 </div>
+
             </nav>
+
         </div>
+
     </header>
-    <!-- header area end -->
 
 
-    <!-- popup search -->
+    <!-- =========================================================
+         SEARCH POPUP
+    ========================================================== -->
+
     <div class="search-popup">
-        <button class="close-search"><span class="far fa-times"></span></button>
+
+        <button class="close-search">
+
+            <span class="far fa-times"></span>
+
+        </button>
+
+
         <form action="#">
+
             <div class="form-group">
-                <input type="search" name="search-field" placeholder="Search Here..." required>
-                <button type="submit"><i class="far fa-search"></i></button>
+
+                <input type="search"
+                    name="search-field"
+                    placeholder="Search Here..."
+                    required>
+
+
+                <button type="submit">
+
+                    <i class="far fa-search"></i>
+
+                </button>
+
             </div>
+
         </form>
+
     </div>
-    <!-- popup search end -->
 
 
-    <!-- sidebar-popup -->
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
     <div class="sidebar-popup">
-        <div class="sidebar-wrapper">
-            <div class="sidebar-content">
-                <button type="button" class="close-sidebar-popup"><i class="far fa-xmark"></i></button>
-                <div class="sidebar-logo">
-                    <img src="assets/img/logo/logo.png" alt="">
-                </div>
-                <div class="sidebar-about">
-                    <h4>About Us</h4>
-                    <p>There are many variations of passages available sure there majority have suffered alteration in
-                        some form by inject humour or randomised words which don't look even slightly believable.</p>
-                </div>
-                <div class="sidebar-contact">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li>
-                            <h6>Email</h6>
-                            <a href="mailto:biowild2026@outlook.com"><i class="far fa-envelope"></i>biowild2026@outlook.com</a>
-                        </li>
-                        <li>
-                            <h6>Phone</h6>
-                            <a href="tel:+21236547898"><i class="far fa-phone"></i>+2 123 654 7898</a>
-                        </li>
-                        <li>
-                            <h6>Address</h6>
-                            <a href="#"><i class="far fa-location-dot"></i>Panama, West Panama, Capira</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sidebar-social">
-                    <h4>Follow Us</h4>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- sidebar-popup end -->
 
+        <div class="sidebar-wrapper">
+
+            <div class="sidebar-content">
+
+
+                <button type="button"
+                    class="close-sidebar-popup">
+
+                    <i class="far fa-xmark"></i>
+
+                </button>
+
+
+                <div class="sidebar-logo">
+
+                    <img src="assets/img/logo/logo.png"
+                        alt="BioWild Logo">
+
+                </div>
+
+
+                <div class="sidebar-about">
+
+                    <h4>
+                        About BioWild
+                    </h4>
+
+                    <p>
+
+                        BioWild is a bird sanctuary in Panama dedicated
+                        to wildlife rescue, conservation, environmental
+                        education, ecotourism and technology.
+
+                    </p>
+
+                </div>
+
+
+                <div class="sidebar-contact">
+
+                    <h4>
+                        Contact Info
+                    </h4>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <h6>
+                                Email
+                            </h6>
+
+                            <a href="mailto:biowild2026@outlook.com">
+
+                                <i class="far fa-envelope"></i>
+
+                                biowild2026@outlook.com
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <h6>
+                                Phone
+                            </h6>
+
+                            <a href="tel:+50761533665">
+
+                                <i class="far fa-phone"></i>
+
+                                +507 6153-3665
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <h6>
+                                Address
+                            </h6>
+
+                            <a href="#">
+
+                                <i class="far fa-location-dot"></i>
+
+                                Panama, West Panama, Capira
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <div class="sidebar-social">
+
+                    <h4>
+                        Follow Us
+                    </h4>
+
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
 
     <main class="main">
 
-        <!-- breadcrumb -->
-        <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.html)">
+
+        <!-- BREADCRUMB -->
+
+        <div class="site-breadcrumb"
+            style="background:url(assets/img/breadcrumb/01.jpg)">
+
             <div class="container">
-                <h2 class="breadcrumb-title">Pricing Plan</h2>
+
+                <h2 class="breadcrumb-title">
+                    Support Our Birds
+                </h2>
+
+
                 <ul class="breadcrumb-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Pricing Plan</li>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li class="active">
+                        Support Plans
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
-        <!-- breadcrumb end -->
 
 
-        <!-- pricing area -->
-        <div class="pricing-area py-120">
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="support-hero">
+
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mx-auto">
-                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
-                            <span class="site-title-tagline">Pricing Plan</span>
-                            <h2 class="site-title">Choose Your <span>Pricing Plan</span></h2>
-                            <div class="heading-divider"></div>
-                            <p>
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a page when looking at its layout.
-                            </p>
-                        </div>
+
+                <div class="support-hero-content wow fadeInLeft"
+                    data-wow-delay=".2s">
+
+
+                    <span class="support-hero-tag">
+
+                        <i class="fas fa-heart"></i>
+
+                        Sponsor. Protect. Inspire.
+
+                    </span>
+
+
+                    <h1>
+
+                        Give a bird
+                        <span>a better tomorrow.</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Every sponsorship helps BioWild care for rescued
+                        birds, protect habitats, educate communities and
+                        build a future where Panama's biodiversity can thrive.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+
+                        <a href="#plans"
+                            class="hero-btn primary">
+
+                            Explore Support Plans
+
+                            <i class="fas fa-arrow-down"></i>
+
+                        </a>
+
+
+                        <a href="#impact"
+                            class="hero-btn secondary">
+
+                            See Your Impact
+
+                            <i class="fas fa-leaf"></i>
+
+                        </a>
+
+
                     </div>
+
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="pricing-item wow fadeInUp" data-wow-delay=".25s">
-                            <div class="pricing-header-wrapper">
-                                <div class="pricing-header">
-                                    <h5>Bronze Level</h5>
-                                    <p>Ideal for those who wish to support in a symbolic and constant way.</p>
-                                </div>
-                                <div class="pricing-amount">
-                                    <strong>$10</strong><span class="pricing-amount-type">/Monthly</span>
-                                </div>
-                                <p class="pricing-text">
-                                    Free Trial For 14 Days
-                                </p>
-                            </div>
-                            <div class="pricing-btn-wrapper">
-                                <a href="#" class="theme-btn">Purchase Now <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                            <div class="pricing-feature">
-                                <ul>
-<li><i class="fas fa-check-circle"></i>Personalized digital sponsorship certificate </li> <li><i class="fas fa-check-circle"></i>Information sheet of the sponsored bird (name, species, history, photos) </li> <li><i class="fas fa-check-circle"></i>Biannual update with photos and news </li> <li><i class="fas fa-times-circle text-danger"></i>5 Experts Animals Hunter</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="pricing-item wow fadeInDown" data-wow-delay=".25s">
-                            <div class="pricing-header-wrapper">
-                                <div class="pricing-header">
-                                    <h5>Silver Level</h5>
-                                    <p>For those who want to become more actively involved in the care of a bird.</p>
-                                </div>
-                                <div class="pricing-amount">
-                                    <strong>$20</strong><span class="pricing-amount-type">/Monthly</span>
-                                </div>
-                                <p class="pricing-text">
-                                    Free Trial For 14 Days
-                                </p>
-                            </div>
-                            <div class="pricing-btn-wrapper">
-                                <a href="#" class="theme-btn">Purchase Now <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                            <div class="pricing-feature">
-                                <ul>
-                                    <li><i class="fas fa-check-circle"></i>8 Months Spent For Hunt</li> 
-                                    <li><i class="fas fa-check-circle"></i>50 Wild Animals Hunting</li>
-                                    <li><i class="fas fa-check-circle"></i>Rifle, Bow, Bait Hunting</li>
-                                    <li><i class="fas fa-check-circle"></i>15 Experts Animals Hunter</li>
-                                    <li><i class="fas fa-times-circle text-danger"></i>More Than 80 Meals</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="pricing-item wow fadeInUp" data-wow-delay=".25s">
-                            <div class="pricing-header-wrapper">
-                                <div class="pricing-header">
-                                    <h5>Golden Level</h5>
-                                    <p>A premium level that offers a direct and deep connection to the project.</p>
-                                </div>
-                                <div class="pricing-amount">
-                                    <strong>$40</strong><span class="pricing-amount-type">/Monthly</span>
-                                </div>
-                                <p class="pricing-text">
-                                    Free Trial For 14 Days
-                                </p>
-                            </div>
-                            <div class="pricing-btn-wrapper">
-                                <a href="#" class="theme-btn">Purchase Now <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                            <div class="pricing-feature">
-                                <ul>
-                                    <li><i class="fas fa-check-circle"></i>Access to a biannual group video call with the BioWild team</li> 
-                                    <li><i class="fas fa-check-circle"></i>Invitation to a free annual guided tour (by appointment)</li>
-                                    <li><i class="fas fa-check-circle"></i>Sponsor's name on a physical mural at the sanctuary</li>
-                                    <li><i class="fas fa-check-circle"></i>Physical welcome kit (if available in your region)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
-        </div>
-        <!-- pricing area end -->
-        
+
+        </section>
+
+
+        <!-- =====================================================
+             IMPACT BAR
+        ====================================================== -->
+
+        <section class="impact-bar">
+
+            <div class="container">
+
+                <div class="impact-box">
+
+                    <div class="row">
+
+
+                        <div class="col-md-3">
+
+                            <div class="impact-item">
+
+                                <i class="fas fa-dove"></i>
+
+                                <h4>
+                                    Bird Care
+                                </h4>
+
+                                <p>
+                                    Support rescued wildlife
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="impact-item">
+
+                                <i class="fas fa-leaf"></i>
+
+                                <h4>
+                                    Conservation
+                                </h4>
+
+                                <p>
+                                    Protect habitats
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="impact-item">
+
+                                <i class="fas fa-book"></i>
+
+                                <h4>
+                                    Education
+                                </h4>
+
+                                <p>
+                                    Inspire future conservationists
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="impact-item">
+
+                                <i class="fas fa-microscope"></i>
+
+                                <h4>
+                                    Research
+                                </h4>
+
+                                <p>
+                                    Advance wildlife knowledge
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRO
+        ====================================================== -->
+
+        <section class="support-intro">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+
+                    <div class="col-lg-6">
+
+                        <div class="support-intro-image wow fadeInLeft"
+                            data-wow-delay=".2s">
+
+
+                            <img src="assets/img/blog/02.jpg"
+                                alt="BioWild bird sanctuary">
+
+
+                            <div class="image-badge">
+
+                                <strong>
+                                    One mission.
+                                </strong>
+
+                                <span>
+                                    Protect Panama's birds and the
+                                    ecosystems they call home.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6">
+
+                        <div class="ps-lg-4 wow fadeInRight"
+                            data-wow-delay=".2s">
+
+
+                            <span class="site-title-tagline">
+
+                                Why support BioWild?
+
+                            </span>
+
+
+                            <h2 class="site-title">
+
+                                Your support becomes
+                                <span>real conservation.</span>
+
+                            </h2>
+
+
+                            <div class="heading-divider"></div>
+
+
+                            <p>
+
+                                A sponsorship is more than a digital badge.
+                                It represents a direct commitment to the
+                                animals, habitats and educational programs
+                                that make conservation possible.
+
+                            </p>
+
+
+                            <div class="intro-point">
+
+                                <div class="intro-point-icon">
+
+                                    <i class="fas fa-heart"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h5>
+                                        Help provide care
+                                    </h5>
+
+                                    <p>
+                                        Contributions can support food,
+                                        habitat maintenance and wildlife care.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="intro-point">
+
+                                <div class="intro-point-icon">
+
+                                    <i class="fas fa-tree"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h5>
+                                        Support conservation
+                                    </h5>
+
+                                    <p>
+                                        Help create stronger conditions for
+                                        birds and their natural habitats.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="intro-point">
+
+                                <div class="intro-point-icon">
+
+                                    <i class="fas fa-graduation-cap"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h5>
+                                        Fund education
+                                    </h5>
+
+                                    <p>
+                                        Help us communicate the importance
+                                        of biodiversity to future generations.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PLANS
+        ====================================================== -->
+
+        <section class="plans-area"
+            id="plans">
+
+            <div class="container">
+
+
+                <div class="row">
+
+                    <div class="col-lg-8 mx-auto">
+
+                        <div class="site-heading text-center">
+
+                            <span class="site-title-tagline">
+                                Choose your level
+                            </span>
+
+                            <h2 class="site-title">
+
+                                Support the mission at
+                                <span>your own level</span>
+
+                            </h2>
+
+                            <div class="heading-divider"></div>
+
+                            <p>
+
+                                Every plan creates a different way to
+                                connect with BioWild and receive updates
+                                about the work your support helps make possible.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BILLING TOGGLE -->
+
+                <div class="billing-toggle-wrapper">
+
+                    <span class="billing-label">
+                        Monthly
+                    </span>
+
+
+                    <label class="billing-toggle">
+
+                        <input type="checkbox"
+                            id="billingToggle">
+
+                        <span class="billing-slider"></span>
+
+                    </label>
+
+
+                    <span class="billing-label">
+                        Annual
+                    </span>
+
+
+                    <span class="save-badge">
+                        SPECIAL
+                    </span>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- =================================================
+                         PARAKEET
+                    ================================================== -->
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="support-plan wow fadeInUp"
+                            data-wow-delay=".15s">
+
+
+                            <div class="plan-icon">
+
+                                <i class="fas fa-dove"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Parakeet
+                            </h3>
+
+
+                            <p class="plan-subtitle">
+
+                                A simple way to become part of the
+                                BioWild conservation community.
+
+                            </p>
+
+
+                            <div class="plan-price monthly-price">
+
+                                <strong>
+                                    $10
+                                </strong>
+
+                                <span>
+                                    / month
+                                </span>
+
+                            </div>
+
+
+                            <div class="plan-price annual-price">
+
+                                <strong>
+                                    $100
+                                </strong>
+
+                                <span>
+                                    / year
+                                </span>
+
+                            </div>
+
+
+                            <div class="pricing-note">
+
+                                Ideal for supporters who want to contribute
+                                consistently.
+
+                            </div>
+
+
+                            <button class="plan-button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#sponsorModal"
+                                data-plan="Parakeet"
+                                data-monthly="$10 / month"
+                                data-annual="$100 / year">
+
+                                Support Parakeet
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </button>
+
+
+                            <ul class="plan-features">
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Personalized digital sponsorship certificate
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Information sheet about a sponsored bird
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Biannual photo and news update
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Social media thank-you mention
+
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         MACAW
+                    ================================================== -->
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="support-plan featured wow fadeInDown"
+                            data-wow-delay=".2s">
+
+
+                            <div class="featured-ribbon">
+                                MOST POPULAR
+                            </div>
+
+
+                            <div class="plan-icon">
+
+                                <i class="fas fa-feather-alt"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Macaw
+                            </h3>
+
+
+                            <p class="plan-subtitle">
+
+                                For supporters who want a deeper
+                                connection with BioWild's work.
+
+                            </p>
+
+
+                            <div class="plan-price monthly-price">
+
+                                <strong>
+                                    $20
+                                </strong>
+
+                                <span>
+                                    / month
+                                </span>
+
+                            </div>
+
+
+                            <div class="plan-price annual-price">
+
+                                <strong>
+                                    $200
+                                </strong>
+
+                                <span>
+                                    / year
+                                </span>
+
+                            </div>
+
+
+                            <div class="pricing-note">
+
+                                A balanced combination of support
+                                and exclusive updates.
+
+                            </div>
+
+
+                            <button class="plan-button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#sponsorModal"
+                                data-plan="Macaw"
+                                data-monthly="$20 / month"
+                                data-annual="$200 / year">
+
+                                Support Macaw
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </button>
+
+
+                            <ul class="plan-features">
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Everything in Parakeet
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Quarterly photos and video updates
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Illustrated digital postcard set
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Exclusive BioWild digital sticker
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Monthly sanctuary video
+
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         HARPY
+                    ================================================== -->
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="support-plan wow fadeInUp"
+                            data-wow-delay=".25s">
+
+
+                            <div class="plan-icon">
+
+                                <i class="fas fa-crow"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Harpy Eagle
+                            </h3>
+
+
+                            <p class="plan-subtitle">
+
+                                Our deepest sponsorship experience for
+                                supporters who want a closer connection.
+
+                            </p>
+
+
+                            <div class="plan-price monthly-price">
+
+                                <strong>
+                                    $40
+                                </strong>
+
+                                <span>
+                                    / month
+                                </span>
+
+                            </div>
+
+
+                            <div class="plan-price annual-price">
+
+                                <strong>
+                                    $400
+                                </strong>
+
+                                <span>
+                                    / year
+                                </span>
+
+                            </div>
+
+
+                            <div class="pricing-note">
+
+                                Designed for long-term supporters
+                                of BioWild's mission.
+
+                            </div>
+
+
+                            <button class="plan-button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#sponsorModal"
+                                data-plan="Harpy Eagle"
+                                data-monthly="$40 / month"
+                                data-annual="$400 / year">
+
+                                Support Harpy Eagle
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </button>
+
+
+                            <ul class="plan-features">
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Everything in Macaw
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Biannual group video call
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Annual guided tour by appointment
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Sponsor name on a sanctuary mural
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="fas fa-check-circle"></i>
+
+                                    Physical welcome kit where available
+
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             COMPARISON
+        ====================================================== -->
+
+        <section class="comparison-area">
+
+            <div class="container">
+
+
+                <div class="row">
+
+                    <div class="col-lg-7 mx-auto">
+
+                        <div class="site-heading text-center">
+
+                            <span class="site-title-tagline">
+                                Compare plans
+                            </span>
+
+                            <h2 class="site-title">
+
+                                Find the support level
+                                <span>that fits you</span>
+
+                            </h2>
+
+                            <div class="heading-divider"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="comparison-table-wrapper">
+
+                    <table class="table comparison-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Benefit
+                                </th>
+
+                                <th>
+                                    Parakeet
+                                </th>
+
+                                <th>
+                                    Macaw
+                                </th>
+
+                                <th>
+                                    Harpy Eagle
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    Digital sponsorship certificate
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Bird information sheet
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Photo & news updates
+                                </td>
+
+                                <td>
+                                    Biannual
+                                </td>
+
+                                <td>
+                                    Quarterly
+                                </td>
+
+                                <td>
+                                    Quarterly+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Video content
+                                </td>
+
+                                <td>
+                                    <span class="comparison-x">—</span>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Group video call
+                                </td>
+
+                                <td>
+                                    <span class="comparison-x">—</span>
+                                </td>
+
+                                <td>
+                                    <span class="comparison-x">—</span>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Guided sanctuary visit
+                                </td>
+
+                                <td>
+                                    <span class="comparison-x">—</span>
+                                </td>
+
+                                <td>
+                                    <span class="comparison-x">—</span>
+                                </td>
+
+                                <td>
+                                    <i class="fas fa-check comparison-check"></i>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             IMPACT CALCULATOR
+        ====================================================== -->
+
+        <section class="calculator-area"
+            id="impact">
+
+            <div class="container">
+
+                <div class="calculator-box wow zoomIn"
+                    data-wow-delay=".15s">
+
+
+                    <div class="text-center">
+
+                        <span class="site-title-tagline"
+                            style="color:#d8ef8f;">
+
+                            Your potential impact
+
+                        </span>
+
+
+                        <h2>
+                            What could your support contribute to?
+                        </h2>
+
+
+                        <p class="mx-auto">
+
+                            Use the slider to explore how different
+                            support levels could fit into your
+                            conservation commitment.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="range-wrapper">
+
+
+                        <label for="supportRange">
+
+                            Monthly support
+
+                        </label>
+
+
+                        <input type="range"
+                            min="5"
+                            max="100"
+                            step="5"
+                            value="20"
+                            id="supportRange"
+                            class="support-range">
+
+
+                        <div class="support-amount">
+
+                            $<span id="supportValue">
+                                20
+                            </span>
+
+                        </div>
+
+
+                        <div class="impact-result">
+
+                            <strong id="impactTitle">
+                                Growing your impact
+                            </strong>
+
+                            <span id="impactText">
+
+                                Consistent support helps BioWild
+                                maintain long-term conservation
+                                and education work.
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="pricing-faq">
+
+            <div class="container">
+
+
+                <div class="row">
+
+                    <div class="col-lg-7 mx-auto">
+
+                        <div class="site-heading text-center">
+
+                            <span class="site-title-tagline">
+                                Support FAQ
+                            </span>
+
+                            <h2 class="site-title">
+
+                                Questions about
+                                <span>sponsorship</span>
+
+                            </h2>
+
+                            <div class="heading-divider"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-8">
+
+
+                        <div class="pricing-faq-item">
+
+                            <button class="pricing-faq-question">
+
+                                What does my sponsorship support?
+
+                                <i class="far fa-plus float-end"></i>
+
+                            </button>
+
+
+                            <div class="pricing-faq-answer">
+
+                                Your support contributes to BioWild's
+                                conservation mission, including areas such
+                                as wildlife care, habitat protection,
+                                environmental education, research and
+                                sanctuary operations.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="pricing-faq-item">
+
+                            <button class="pricing-faq-question">
+
+                                Does a sponsorship mean I own the bird?
+
+                                <i class="far fa-plus float-end"></i>
+
+                            </button>
+
+
+                            <div class="pricing-faq-answer">
+
+                                No. Sponsorship is symbolic and supports
+                                the bird and the sanctuary's conservation
+                                work. Wildlife remains under the care and
+                                responsibility of BioWild.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="pricing-faq-item">
+
+                            <button class="pricing-faq-question">
+
+                                Can I give a sponsorship as a gift?
+
+                                <i class="far fa-plus float-end"></i>
+
+                            </button>
+
+
+                            <div class="pricing-faq-answer">
+
+                                Yes. A digital sponsorship certificate makes
+                                the program suitable as a meaningful gift for
+                                someone interested in birds, conservation
+                                and wildlife.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="pricing-faq-item">
+
+                            <button class="pricing-faq-question">
+
+                                Can I cancel my support?
+
+                                <i class="far fa-plus float-end"></i>
+
+                            </button>
+
+
+                            <div class="pricing-faq-answer">
+
+                                Support arrangements can be managed according
+                                to the payment system connected to BioWild.
+                                Contact the team if you need assistance.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="pricing-faq-item">
+
+                            <button class="pricing-faq-question">
+
+                                Can I visit the sanctuary as a sponsor?
+
+                                <i class="far fa-plus float-end"></i>
+
+                            </button>
+
+
+                            <div class="pricing-faq-answer">
+
+                                The Harpy Eagle level includes an annual
+                                guided visit by appointment, subject to
+                                availability and sanctuary conditions.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="support-cta">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+
+                    <div class="col-lg-7">
+
+                        <h2>
+                            Conservation needs people like you.
+                        </h2>
+
+                        <p class="mb-0">
+
+                            Choose a level, support the mission and
+                            become part of BioWild's story.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-lg-5">
+
+
+                        <div class="support-cta-buttons">
+
+
+                            <a href="#plans"
+                                class="support-cta-btn">
+
+                                Choose a Plan
+
+                                <i class="fas fa-heart"></i>
+
+                            </a>
+
+
+                            <a href="contact.html"
+                                class="support-cta-btn light">
+
+                                Contact BioWild
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
     </main>
 
 
-    <!-- footer area -->
+    <!-- =========================================================
+         SPONSOR MODAL
+    ========================================================== -->
+
+    <div class="modal fade sponsor-modal"
+        id="sponsorModal"
+        tabindex="-1">
+
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+
+                <div class="sponsor-modal-header">
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <h4>
+                            Continue your sponsorship
+                        </h4>
+
+                        <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"></button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-body p-4">
+
+
+                    <div class="modal-plan-summary">
+
+                        <small>
+                            Selected plan
+                        </small>
+
+                        <strong id="selectedPlan">
+                            Parakeet
+                        </strong>
+
+
+                        <div class="mt-2"
+                            id="selectedPrice">
+
+                            $10 / month
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="sponsorForm">
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                class="form-control"
+                                placeholder="Your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Email
+                            </label>
+
+                            <input type="email"
+                                class="form-control"
+                                placeholder="you@example.com"
+                                required>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+
+                                Is this sponsorship a gift?
+
+                            </label>
+
+
+                            <select class="form-select">
+
+                                <option>
+                                    No
+                                </option>
+
+                                <option>
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button type="submit"
+                            class="modal-submit">
+
+                            Continue to Sponsorship
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </button>
+
+
+                    </form>
+
+
+                    <div class="modal-success"
+                        id="modalSuccess">
+
+                        <strong>
+                            Thank you for supporting BioWild!
+                        </strong>
+
+                        <br><br>
+
+                        Your sponsorship request has been prepared.
+                        Connect the form to your preferred payment
+                        provider to complete the transaction.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
     <footer class="footer-area">
+
+
         <div class="footer-widget">
+
             <div class="container">
+
                 <div class="row footer-widget-wrapper pt-100 pb-70">
+
+
+                    <!-- ABOUT -->
+
                     <div class="col-md-6 col-lg-4">
+
                         <div class="footer-widget-box about-us">
-                            <a href="#" class="footer-logo">
-                                <img src="assets/img/logo/logo-light.png" alt="">
+
+
+                            <a href="index.html"
+                                class="footer-logo">
+
+                                <img src="assets/img/logo/logo-light.png"
+                                    alt="BioWild Logo">
+
                             </a>
+
+
                             <p class="mb-3">
-                                We are many variations of passages available but the majority have suffered alteration
-                                in some form by injected humour words believable.
+
+                                We are dedicated to protecting Panama's
+                                birds and their natural habitats through
+                                rescue, conservation, education and
+                                responsible ecotourism.
+
                             </p>
+
+
                             <ul class="footer-contact">
-                                <li><a href="tel:+21236547898"><i class="far fa-phone"></i>+2 123 654 7898</a></li>
-                                <li><i class="far fa-map-marker-alt"></i>Panama, West Panama, Capira</li>
-                                <li><a href="mailto:biowild2026@outlook.com"><i
-                                            class="far fa-envelope"></i>biowild2026@outlook.com</a></li>
+
+
+                                <li>
+
+                                    <a href="tel:+50761533665">
+
+                                        <i class="far fa-phone"></i>
+
+                                        +507 6153-3665
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="far fa-map-marker-alt"></i>
+
+                                    Capira, West Panama, Panama
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="mailto:biowild2026@outlook.com">
+
+                                        <i class="far fa-envelope"></i>
+
+                                        biowild2026@outlook.com
+
+                                    </a>
+
+                                </li>
+
+
                             </ul>
+
                         </div>
+
                     </div>
+
+
+                    <!-- QUICK LINKS -->
+
                     <div class="col-md-6 col-lg-2">
+
                         <div class="footer-widget-box list">
-                            <h4 class="footer-widget-title">Quick Links</h4>
+
+
+                            <h4 class="footer-widget-title">
+                                Quick Links
+                            </h4>
+
+
                             <ul class="footer-list">
-                                <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Update News</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Testimonials</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Terms Of Service</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Privacy policy</a></li>
+
+
+                                <li>
+
+                                    <a href="about.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        About Us
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="gallery.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Our Birds
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="volunteering.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Volunteering
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="faq.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        FAQ
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="contact.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Contact Us
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="privacy.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Privacy Policy
+
+                                    </a>
+
+                                </li>
+
+
                             </ul>
+
                         </div>
+
                     </div>
+
+
+                    <!-- SERVICES -->
+
                     <div class="col-md-6 col-lg-3">
+
                         <div class="footer-widget-box list">
-                            <h4 class="footer-widget-title">Our Services</h4>
+
+
+                            <h4 class="footer-widget-title">
+                                Our Services
+                            </h4>
+
+
                             <ul class="footer-list">
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Bait Hunting</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Rifle Hunting</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Wild Animals Hunting</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Mountain Hunting</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Fish Hunting</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Bow Hunting</a></li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Bird Rescue
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Wildlife Rehabilitation
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Bird Care
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Habitat Conservation
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Environmental Education
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Guided Bird Watching
+
+                                    </a>
+
+                                </li>
+
+
                             </ul>
+
                         </div>
+
                     </div>
+
+
+                    <!-- NEWSLETTER -->
+
                     <div class="col-md-6 col-lg-3">
+
                         <div class="footer-widget-box list">
-                            <h4 class="footer-widget-title">Newsletter</h4>
+
+
+                            <h4 class="footer-widget-title">
+                                Newsletter
+                            </h4>
+
+
                             <div class="footer-newsletter">
-                                <p>Subscribe Our Newsletter To Get Latest Update And News</p>
+
+
+                                <p>
+
+                                    Subscribe to our newsletter to
+                                    receive conservation news and
+                                    stories from BioWild.
+
+                                </p>
+
+
                                 <div class="subscribe-form">
+
                                     <form action="#">
-                                        <input type="email" class="form-control" placeholder="Your Email">
-                                        <button class="theme-btn" type="submit">
-                                            Subscribe Now <i class="far fa-paper-plane"></i>
+
+                                        <input type="email"
+                                            class="form-control"
+                                            placeholder="Your Email"
+                                            required>
+
+
+                                        <button class="theme-btn"
+                                            type="submit">
+
+                                            Subscribe Now
+
+                                            <i class="far fa-paper-plane"></i>
+
                                         </button>
+
                                     </form>
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
+
+
                 </div>
+
             </div>
+
         </div>
+
+
+        <!-- COPYRIGHT -->
+
         <div class="copyright">
+
             <div class="container">
+
                 <div class="row">
+
+
                     <div class="col-md-6 align-self-center">
+
                         <p class="copyright-text">
-                            &copy; Copyright <span id="date"></span> <a href="#"> Hunter </a> All Rights Reserved.
+
+                            &copy; Copyright
+
+                            <span id="date"></span>
+
+                            <a href="index.html">
+                                BioWild Panama
+                            </a>
+
+                            All Rights Reserved.
+
                         </p>
+
                     </div>
+
+
                     <div class="col-md-6 align-self-center">
+
                         <ul class="footer-social">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+
+                            <li>
+
+                                <a href="#"
+                                    aria-label="Facebook">
+
+                                    <i class="fab fa-facebook-f"></i>
+
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="#"
+                                    aria-label="X">
+
+                                    <i class="fab fa-x-twitter"></i>
+
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="#"
+                                    aria-label="Instagram">
+
+                                    <i class="fab fa-instagram"></i>
+
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="#"
+                                    aria-label="YouTube">
+
+                                    <i class="fab fa-youtube"></i>
+
+                                </a>
+
+                            </li>
+
+
                         </ul>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
-    <!-- footer area end -->
 
 
-    <!-- scroll-top -->
-    <a href="#" id="scroll-top"><i class="far fa-arrow-up"></i></a>
-    <!-- scroll-top end -->
+    <!-- =========================================================
+         SCROLL TOP
+    ========================================================== -->
+
+    <a href="#"
+        id="scroll-top">
+
+        <i class="far fa-arrow-up"></i>
+
+    </a>
 
 
-    <!-- js -->
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+
     <script src="assets/js/modernizr.min.js"></script>
+
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
     <script src="assets/js/isotope.pkgd.min.js"></script>
+
     <script src="assets/js/jquery.appear.min.js"></script>
+
     <script src="assets/js/jquery.easing.min.js"></script>
+
     <script src="assets/js/owl.carousel.min.js"></script>
+
     <script src="assets/js/counter-up.js"></script>
+
     <script src="assets/js/jquery-ui.min.js"></script>
+
     <script src="assets/js/jquery.nice-select.min.js"></script>
+
     <script src="assets/js/wow.min.js"></script>
+
     <script src="assets/js/main.js"></script>
+
+
+    <!-- =========================================================
+         PRICING JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            /* =====================================================
+               WOW
+            ====================================================== */
+
+            if (typeof WOW !== 'undefined') {
+
+                new WOW().init();
+
+            }
+
+
+            /* =====================================================
+               BILLING TOGGLE
+            ====================================================== */
+
+            $('#billingToggle').on('change', function () {
+
+
+                const annual =
+                    $(this).is(':checked');
+
+
+                if (annual) {
+
+
+                    $('.monthly-price')
+                        .fadeOut(150, function () {
+
+                            $('.annual-price')
+                                .fadeIn(150);
+
+                        });
+
+
+                } else {
+
+
+                    $('.annual-price')
+                        .fadeOut(150, function () {
+
+                            $('.monthly-price')
+                                .fadeIn(150);
+
+                        });
+
+                }
+
+            });
+
+
+            /* =====================================================
+               PLAN MODAL
+            ====================================================== */
+
+            $('.plan-button').on('click', function () {
+
+
+                const plan =
+                    $(this).data('plan');
+
+
+                const monthly =
+                    $(this).data('monthly');
+
+
+                const annual =
+                    $(this).data('annual');
+
+
+                const isAnnual =
+                    $('#billingToggle').is(':checked');
+
+
+                $('#selectedPlan')
+                    .text(plan);
+
+
+                $('#selectedPrice')
+                    .text(
+                        isAnnual
+                            ? annual
+                            : monthly
+                    );
+
+
+                $('#modalSuccess')
+                    .hide();
+
+
+                $('#sponsorForm')
+                    .show();
+
+            });
+
+
+            /* =====================================================
+               SPONSOR FORM
+            ====================================================== */
+
+            $('#sponsorForm').on('submit', function (event) {
+
+
+                event.preventDefault();
+
+
+                $(this).slideUp(250);
+
+
+                $('#modalSuccess')
+                    .slideDown(300);
+
+            });
+
+
+            /* =====================================================
+               IMPACT CALCULATOR
+            ====================================================== */
+
+            function updateImpact() {
+
+
+                const amount =
+                    parseInt(
+                        $('#supportRange').val()
+                    );
+
+
+                $('#supportValue')
+                    .text(amount);
+
+
+                let title = '';
+                let text = '';
+
+
+                if (amount <= 15) {
+
+
+                    title =
+                        'Starting your conservation journey';
+
+
+                    text =
+                        'Consistent support helps maintain the everyday work that keeps conservation projects moving.';
+
+
+                } else if (amount <= 30) {
+
+
+                    title =
+                        'Growing your impact';
+
+
+                    text =
+                        'A stronger monthly commitment can contribute to multiple areas of BioWild’s conservation mission.';
+
+
+                } else if (amount <= 50) {
+
+
+                    title =
+                        'Making a deeper commitment';
+
+
+                    text =
+                        'At this level, your support can help strengthen wildlife care, education and conservation initiatives together.';
+
+
+                } else if (amount <= 75) {
+
+
+                    title =
+                        'Becoming a major supporter';
+
+
+                    text =
+                        'Your support represents a significant commitment to the long-term work of protecting wildlife.';
+
+
+                } else {
+
+
+                    title =
+                        'Championing the mission';
+
+
+                    text =
+                        'A contribution at this level represents exceptional support for BioWild and its broader conservation goals.';
+
+                }
+
+
+                $('#impactTitle')
+                    .text(title);
+
+
+                $('#impactText')
+                    .text(text);
+
+            }
+
+
+            $('#supportRange').on(
+                'input',
+                updateImpact
+            );
+
+
+            updateImpact();
+
+
+            /* =====================================================
+               FAQ
+            ====================================================== */
+
+            $('.pricing-faq-question').on('click', function () {
+
+
+                const answer =
+                    $(this)
+                    .next('.pricing-faq-answer');
+
+
+                $('.pricing-faq-answer')
+                    .not(answer)
+                    .removeClass('show');
+
+
+                answer.toggleClass('show');
+
+
+                const icon =
+                    $(this).find('i');
+
+
+                $('.pricing-faq-question i')
+                    .not(icon)
+                    .removeClass('fa-minus')
+                    .addClass('fa-plus');
+
+
+                icon.toggleClass(
+                    'fa-plus fa-minus'
+                );
+
+            });
+
+
+            /* =====================================================
+               YEAR
+            ====================================================== */
+
+            $('#date')
+                .text(
+                    new Date().getFullYear()
+                );
+
+
+        });
+
+    </script>
+
 
 </body>
 
-
-<!-- Mirrored from live.themewild.com/hunter/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Jun 2026 20:38:38 GMT -->
 </html>
