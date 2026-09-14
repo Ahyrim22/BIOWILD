@@ -49,7 +49,7 @@ Table of contents
 38. Team css 
 39. CTA css 
 40. Destination css 
-41. Gallery css 
+41. Bird Knowledge css 
 42. Shop css 
 43. Price range css 
 44. Faq css 
@@ -98,7 +98,7 @@ Table of contents
   --border-info-color2: rgba(0, 0, 0, 0.05);
   --border-white-color: rgba(255, 255, 255, 0.08);
   --border-white-color2: rgba(255, 255, 255, 0.05);
-  --footer-bg: #36341d;
+  --footer-bg: #0D2F1F;
   --footer-text-color: #F5FAFF;
 }
 
@@ -4164,7 +4164,7 @@ label {
 
 
 /* ========================
-41. Gallery css 
+41. Bird Knowledge css 
 =========================== */
 
 .gallery-item {
