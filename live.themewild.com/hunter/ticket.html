@@ -1,0 +1,6661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         META
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Buy or reserve your BioWild sanctuary entrance ticket and plan your visit to our bird sanctuary in Capira, West Panama, Panama.">
+
+    <meta name="keywords"
+        content="BioWild tickets, bird sanctuary Panama, Capira sanctuary, birdwatching, sanctuary admission, wildlife conservation, Panama birds">
+
+    <title>
+        BioWild - Buy Tickets
+    </title>
+
+
+    <!-- FAVICON -->
+
+    <link rel="icon"
+        type="image/x-icon"
+        href="assets/img/logo/favicon.png">
+
+
+    <!-- =========================================================
+         TEMPLATE CSS
+    ========================================================== -->
+
+    <link rel="stylesheet"
+        href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/all-fontawesome.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/animate.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/magnific-popup.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/owl.carousel.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/jquery-ui.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/nice-select.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/style.css">
+
+
+    <!-- =========================================================
+         BIOWILD SHOP EXPERIENCE
+    ========================================================== -->
+
+    <style>
+
+        :root {
+
+            --shop-green:
+                #2e7d32;
+
+            --shop-green-rgb:
+                46, 125, 50;
+
+            --shop-dark:
+                #0b2111;
+
+            --shop-dark-2:
+                #12311b;
+
+            --shop-ink:
+                #152119;
+
+            --shop-muted:
+                #6d786f;
+
+            --shop-paper:
+                #f4f8f4;
+
+            --shop-paper-2:
+                #edf4ee;
+
+            --shop-white:
+                #ffffff;
+
+            --shop-line:
+                rgba(
+                    18,
+                    55,
+                    27,
+                    .11
+                );
+
+            --shop-shadow:
+                0 28px 80px
+                rgba(
+                    13,
+                    48,
+                    22,
+                    .12
+                );
+
+        }
+
+
+        * {
+
+            box-sizing:
+                border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior:
+                smooth;
+
+        }
+
+
+        body {
+
+            overflow-x:
+                hidden;
+
+            background:
+                #fff;
+
+        }
+
+
+        body.panel-open {
+
+            overflow:
+                hidden;
+
+        }
+
+
+        ::selection {
+
+            background:
+                rgba(
+                    var(--shop-green-rgb),
+                    .18
+                );
+
+        }
+
+
+        button,
+        input,
+        select {
+
+            font-family:
+                inherit;
+
+        }
+
+
+        button {
+
+            cursor:
+                pointer;
+
+        }
+
+
+        section[id] {
+
+            scroll-margin-top:
+                100px;
+
+        }
+
+
+        /* =========================================================
+           PAGE PROGRESS
+        ========================================================== */
+
+        #shopProgress {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                0;
+
+            height:
+                3px;
+
+            z-index:
+                100000;
+
+            background:
+                var(--shop-green);
+
+            pointer-events:
+                none;
+
+        }
+
+
+        /* =========================================================
+           REVEAL
+        ========================================================== */
+
+        .shop-reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(
+                    30px
+                );
+
+            transition:
+
+                opacity
+                .75s
+                ease,
+
+                transform
+                .75s
+                cubic-bezier(
+                    .2,
+                    .8,
+                    .2,
+                    1
+                );
+
+        }
+
+
+        .shop-reveal.visible {
+
+            opacity:
+                1;
+
+            transform:
+                none;
+
+        }
+
+
+        /* =========================================================
+           SHOP OPENING
+           NOT A SLIDER / NOT A TRADITIONAL HERO
+        ========================================================== */
+
+        .shop-opening {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            padding:
+                95px 0 70px;
+
+            background:
+                #fff;
+
+        }
+
+
+        .shop-opening::before {
+
+            content:
+                "BIOWILD";
+
+            position:
+                absolute;
+
+            top:
+                -80px;
+
+            right:
+                -20px;
+
+            color:
+                rgba(
+                    21,
+                    33,
+                    25,
+                    .025
+                );
+
+            font-size:
+
+                clamp(
+                    130px,
+                    23vw,
+                    340px
+                );
+
+            font-weight:
+                900;
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -.08em;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        .shop-opening-grid {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            display:
+                grid;
+
+            grid-template-columns:
+
+                minmax(
+                    0,
+                    1.1fr
+                )
+
+                minmax(
+                    380px,
+                    .9fr
+                );
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .opening-eyebrow {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            margin-bottom:
+                23px;
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .18em;
+
+        }
+
+
+        .opening-eyebrow::before {
+
+            content:
+                "";
+
+            width:
+                42px;
+
+            height:
+                2px;
+
+            background:
+                var(--shop-green);
+
+        }
+
+
+        .opening-copy h1 {
+
+            max-width:
+                840px;
+
+            margin:
+                0 0 28px;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+
+                clamp(
+                    58px,
+                    8vw,
+                    112px
+                );
+
+            line-height:
+                .88;
+
+            letter-spacing:
+                -.067em;
+
+            text-wrap:
+                balance;
+
+        }
+
+
+        .opening-copy h1 span {
+
+            color:
+                var(--shop-green);
+
+        }
+
+
+        .opening-description {
+
+            max-width:
+                690px;
+
+            margin:
+                0;
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                17px;
+
+            line-height:
+                1.85;
+
+        }
+
+
+        .opening-actions {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                11px;
+
+            margin-top:
+                30px;
+
+        }
+
+
+        .opening-actions
+        .theme-btn {
+
+            margin:
+                0;
+
+        }
+
+
+        .opening-secondary {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                9px;
+
+            padding:
+                13px 22px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                99px;
+
+            background:
+                var(--shop-paper);
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .opening-secondary:hover {
+
+            transform:
+                translateY(
+                    -2px
+                );
+
+            color:
+                var(--shop-green);
+
+            background:
+                #fff;
+
+            border-color:
+                rgba(
+                    var(--shop-green-rgb),
+                    .35
+                );
+
+        }
+
+
+        /* =========================================================
+           MISSION RECEIPT
+        ========================================================== */
+
+        .mission-receipt {
+
+            position:
+                relative;
+
+            max-width:
+                460px;
+
+            width:
+                100%;
+
+            justify-self:
+                end;
+
+            padding:
+                19px;
+
+            border-radius:
+                30px;
+
+            background:
+                var(--shop-dark);
+
+            box-shadow:
+
+                0 35px 80px
+                rgba(
+                    10,
+                    38,
+                    17,
+                    .22
+                );
+
+            transform:
+                rotate(
+                    1.5deg
+                );
+
+            transition:
+                transform
+                .35s ease;
+
+        }
+
+
+        .mission-receipt:hover {
+
+            transform:
+
+                rotate(
+                    0
+                )
+
+                translateY(
+                    -6px
+                );
+
+        }
+
+
+        .receipt-inner {
+
+            padding:
+                29px;
+
+            border:
+                1px dashed
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .21
+                );
+
+            border-radius:
+                21px;
+
+            color:
+                #fff;
+
+        }
+
+
+        .receipt-head {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        .receipt-brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+        }
+
+
+        .receipt-brand-icon {
+
+            width:
+                48px;
+
+            height:
+                48px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                #fff;
+
+            color:
+                var(--shop-dark);
+
+            font-size:
+                19px;
+
+        }
+
+
+        .receipt-brand strong {
+
+            display:
+                block;
+
+            color:
+                #fff;
+
+            font-size:
+                16px;
+
+        }
+
+
+        .receipt-brand small {
+
+            display:
+                block;
+
+            margin-top:
+                2px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .45
+                );
+
+            font-size:
+                8px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .receipt-number {
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .45
+                );
+
+            font-size:
+                9px;
+
+            letter-spacing:
+                .13em;
+
+        }
+
+
+        .receipt-row {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                16px;
+
+            padding:
+                12px 0;
+
+            border-bottom:
+                1px dashed
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .14
+                );
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .68
+                );
+
+            font-size:
+                12px;
+
+        }
+
+
+        .receipt-row strong {
+
+            color:
+                #fff;
+
+            font-size:
+                12px;
+
+        }
+
+
+        .receipt-impact {
+
+            margin:
+                28px 0;
+
+            padding:
+                21px;
+
+            border-radius:
+                17px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .07
+                );
+
+        }
+
+
+        .receipt-impact small {
+
+            display:
+                block;
+
+            margin-bottom:
+                7px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .44
+                );
+
+            font-size:
+                8px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .13em;
+
+        }
+
+
+        .receipt-impact h3 {
+
+            margin:
+                0;
+
+            color:
+                #fff;
+
+            font-size:
+                25px;
+
+            line-height:
+                1.05;
+
+        }
+
+
+        .receipt-cart {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr auto;
+
+            gap:
+                18px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .receipt-cart small {
+
+            display:
+                block;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .45
+                );
+
+            font-size:
+                8px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .receipt-cart strong {
+
+            display:
+                block;
+
+            margin-top:
+                3px;
+
+            color:
+                #fff;
+
+            font-size:
+                22px;
+
+        }
+
+
+        .receipt-open-cart {
+
+            width:
+                52px;
+
+            height:
+                52px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                0;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--shop-green);
+
+            color:
+                #fff;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .receipt-open-cart:hover {
+
+            transform:
+                rotate(
+                    -8deg
+                )
+                scale(
+                    1.06
+                );
+
+            background:
+                #fff;
+
+            color:
+                var(--shop-dark);
+
+        }
+
+
+        /* =========================================================
+           SHOP FACTS
+        ========================================================== */
+
+        .shop-facts {
+
+            padding:
+                0 0 90px;
+
+            background:
+                #fff;
+
+        }
+
+
+        .shop-facts-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+
+                repeat(
+                    3,
+                    1fr
+                );
+
+            border-top:
+                1px solid
+                var(--shop-line);
+
+            border-bottom:
+                1px solid
+                var(--shop-line);
+
+        }
+
+
+        .shop-fact {
+
+            padding:
+                28px 24px;
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .shop-fact
+        + .shop-fact {
+
+            border-left:
+                1px solid
+                var(--shop-line);
+
+        }
+
+
+        .shop-fact-number {
+
+            font-size:
+                36px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1;
+
+            color:
+                var(--shop-green);
+
+            letter-spacing:
+                -.04em;
+
+        }
+
+
+        .shop-fact-text strong {
+
+            display:
+                block;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                13px;
+
+        }
+
+
+        .shop-fact-text span {
+
+            display:
+                block;
+
+            margin-top:
+                2px;
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                11px;
+
+        }
+
+
+        /* =========================================================
+           CATALOG
+        ========================================================== */
+
+        .catalog-area {
+
+            padding:
+                110px 0 125px;
+
+            background:
+                var(--shop-paper);
+
+        }
+
+
+        .catalog-head {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            align-items:
+                end;
+
+            gap:
+                50px;
+
+            margin-bottom:
+                45px;
+
+        }
+
+
+        .catalog-label {
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .18em;
+
+        }
+
+
+        .catalog-head h2 {
+
+            margin:
+                8px 0 0;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+
+                clamp(
+                    43px,
+                    6vw,
+                    76px
+                );
+
+            line-height:
+                .98;
+
+            letter-spacing:
+                -.05em;
+
+        }
+
+
+        .catalog-head p {
+
+            justify-self:
+                end;
+
+            max-width:
+                650px;
+
+            margin:
+                0;
+
+            color:
+                var(--shop-muted);
+
+            line-height:
+                1.78;
+
+        }
+
+
+        /* =========================================================
+           CATEGORY RAIL
+        ========================================================== */
+
+        .category-rail {
+
+            position:
+                sticky;
+
+            top:
+                82px;
+
+            z-index:
+                20;
+
+            margin-bottom:
+                24px;
+
+            padding:
+                10px;
+
+            display:
+                flex;
+
+            gap:
+                8px;
+
+            align-items:
+                center;
+
+            overflow-x:
+                auto;
+
+            scrollbar-width:
+                none;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                99px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .90
+                );
+
+            backdrop-filter:
+                blur(
+                    16px
+                );
+
+            box-shadow:
+
+                0 10px 40px
+                rgba(
+                    14,
+                    48,
+                    23,
+                    .07
+                );
+
+        }
+
+
+        .category-rail::-webkit-scrollbar {
+
+            display:
+                none;
+
+        }
+
+
+        .category-pill {
+
+            flex:
+                0 0 auto;
+
+            padding:
+                10px 16px;
+
+            border:
+                1px solid
+                transparent;
+
+            border-radius:
+                99px;
+
+            background:
+                transparent;
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            transition:
+                .2s ease;
+
+        }
+
+
+        .category-pill:hover {
+
+            color:
+                var(--shop-green);
+
+            background:
+                var(--shop-paper);
+
+        }
+
+
+        .category-pill.active {
+
+            background:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+        }
+
+
+        /* =========================================================
+           TOOLBAR
+        ========================================================== */
+
+        .catalog-toolbar {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(
+                    230px,
+                    1fr
+                )
+                auto
+                auto;
+
+            gap:
+                10px;
+
+            align-items:
+                center;
+
+            margin-bottom:
+                28px;
+
+        }
+
+
+        .catalog-search {
+
+            position:
+                relative;
+
+        }
+
+
+        .catalog-search i {
+
+            position:
+                absolute;
+
+            left:
+                17px;
+
+            top:
+                50%;
+
+            transform:
+                translateY(
+                    -50%
+                );
+
+            color:
+                var(--shop-muted);
+
+            pointer-events:
+                none;
+
+        }
+
+
+        .catalog-search input {
+
+            width:
+                100%;
+
+            height:
+                52px;
+
+            padding:
+                0 18px 0 46px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                99px;
+
+            outline:
+                0;
+
+            background:
+                #fff;
+
+            color:
+                var(--shop-ink);
+
+            transition:
+                .2s ease;
+
+        }
+
+
+        .catalog-search input:focus {
+
+            border-color:
+                var(--shop-green);
+
+            box-shadow:
+
+                0 0 0 4px
+                rgba(
+                    var(--shop-green-rgb),
+                    .08
+                );
+
+        }
+
+
+        .catalog-sort {
+
+            height:
+                52px;
+
+            min-width:
+                185px;
+
+            padding:
+                0 40px 0 17px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                99px;
+
+            outline:
+                0;
+
+            background:
+                #fff;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                12px;
+
+        }
+
+
+        .filter-trigger {
+
+            height:
+                52px;
+
+            padding:
+                0 20px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                99px;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            background:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            transition:
+                .2s ease;
+
+        }
+
+
+        .filter-trigger:hover {
+
+            transform:
+                translateY(
+                    -2px
+                );
+
+        }
+
+
+        .filter-badge {
+
+            min-width:
+                20px;
+
+            height:
+                20px;
+
+            padding:
+                0 6px;
+
+            display:
+                none;
+
+            place-items:
+                center;
+
+            border-radius:
+                99px;
+
+            background:
+                #fff;
+
+            color:
+                var(--shop-dark);
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .filter-badge.show {
+
+            display:
+                grid;
+
+        }
+
+
+        /* =========================================================
+           RESULT LINE
+        ========================================================== */
+
+        .catalog-result-line {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                22px;
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                11px;
+
+        }
+
+
+        .catalog-result-line strong {
+
+            color:
+                var(--shop-ink);
+
+        }
+
+
+        .clear-inline {
+
+            padding:
+                0;
+
+            border:
+                0;
+
+            background:
+                transparent;
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                11px;
+
+            font-weight:
+                750;
+
+        }
+
+
+        /* =========================================================
+           PRODUCT GRID
+        ========================================================== */
+
+        .product-gallery {
+
+            display:
+                grid;
+
+            grid-template-columns:
+
+                repeat(
+                    3,
+                    minmax(
+                        0,
+                        1fr
+                    )
+                );
+
+            grid-auto-flow:
+                dense;
+
+            gap:
+                20px;
+
+        }
+
+
+        .product-card {
+
+            position:
+                relative;
+
+            min-width:
+                0;
+
+        }
+
+
+        .product-card.wide {
+
+            grid-column:
+                span 2;
+
+        }
+
+
+        .product-card-shell {
+
+            position:
+                relative;
+
+            height:
+                100%;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                27px;
+
+            background:
+                #fff;
+
+            transition:
+
+                transform
+                .35s
+                cubic-bezier(
+                    .2,
+                    .8,
+                    .2,
+                    1
+                ),
+
+                box-shadow
+                .35s ease;
+
+        }
+
+
+        .product-card-shell:hover {
+
+            transform:
+                translateY(
+                    -8px
+                );
+
+            box-shadow:
+                var(--shop-shadow);
+
+        }
+
+
+        .product-card.wide
+        .product-card-shell {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.25fr .75fr;
+
+        }
+
+
+        .product-image {
+
+            position:
+                relative;
+
+            min-height:
+                330px;
+
+            overflow:
+                hidden;
+
+            background:
+                var(--shop-paper-2);
+
+        }
+
+
+        .product-card:not(.wide)
+        .product-image {
+
+            height:
+                330px;
+
+        }
+
+
+        .product-image img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            transition:
+                transform
+                .65s
+                cubic-bezier(
+                    .2,
+                    .8,
+                    .2,
+                    1
+                );
+
+        }
+
+
+        .product-card-shell:hover
+        .product-image img {
+
+            transform:
+                scale(
+                    1.055
+                );
+
+        }
+
+
+        .product-image::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            pointer-events:
+                none;
+
+            background:
+
+                linear-gradient(
+
+                    180deg,
+
+                    transparent
+                    60%,
+
+                    rgba(
+                        10,
+                        35,
+                        16,
+                        .14
+                    )
+
+                );
+
+        }
+
+
+        .product-label {
+
+            position:
+                absolute;
+
+            top:
+                17px;
+
+            left:
+                17px;
+
+            z-index:
+                3;
+
+            padding:
+                7px 11px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .24
+                );
+
+            border-radius:
+                99px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .85
+                );
+
+            backdrop-filter:
+                blur(
+                    9px
+                );
+
+            color:
+                var(--shop-dark);
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .11em;
+
+        }
+
+
+        .product-add {
+
+            position:
+                absolute;
+
+            right:
+                17px;
+
+            bottom:
+                17px;
+
+            z-index:
+                5;
+
+            width:
+                54px;
+
+            height:
+                54px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                0;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--shop-green);
+
+            color:
+                #fff;
+
+            box-shadow:
+
+                0 13px 30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .20
+                );
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .product-card-shell:hover
+        .product-add {
+
+            transform:
+                rotate(
+                    90deg
+                )
+                scale(
+                    1.05
+                );
+
+        }
+
+
+        .product-add:hover {
+
+            background:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+        }
+
+
+        .product-add.added {
+
+            transform:
+                scale(
+                    1.13
+                ) !important;
+
+            background:
+                var(--shop-dark);
+
+        }
+
+
+        .product-qty {
+
+            position:
+                absolute;
+
+            top:
+                -6px;
+
+            right:
+                -5px;
+
+            min-width:
+                21px;
+
+            height:
+                21px;
+
+            padding:
+                0 5px;
+
+            display:
+                none;
+
+            place-items:
+                center;
+
+            border:
+                2px solid
+                var(--shop-green);
+
+            border-radius:
+                99px;
+
+            background:
+                #fff;
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                9px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .product-qty.show {
+
+            display:
+                grid;
+
+        }
+
+
+        .product-info {
+
+            padding:
+                23px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .product-category {
+
+            margin-bottom:
+                7px;
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .13em;
+
+        }
+
+
+        .product-title {
+
+            min-height:
+                50px;
+
+            margin:
+                0;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                21px;
+
+            line-height:
+                1.18;
+
+            letter-spacing:
+                -.02em;
+
+        }
+
+
+        .product-card.wide
+        .product-title {
+
+            font-size:
+                30px;
+
+            min-height:
+                0;
+
+        }
+
+
+        .product-bottom {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            margin-top:
+                18px;
+
+            padding-top:
+                16px;
+
+            border-top:
+                1px solid
+                var(--shop-line);
+
+        }
+
+
+        .product-price {
+
+            color:
+                var(--shop-dark);
+
+            font-size:
+                21px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                -.03em;
+
+        }
+
+
+        .product-collection {
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                9px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .1em;
+
+        }
+
+
+        /* =========================================================
+           EMPTY
+        ========================================================== */
+
+        .shop-empty {
+
+            grid-column:
+                1 / -1;
+
+            display:
+                none;
+
+            padding:
+                80px 20px;
+
+            text-align:
+                center;
+
+            border:
+                1px dashed
+                rgba(
+                    var(--shop-green-rgb),
+                    .25
+                );
+
+            border-radius:
+                27px;
+
+            background:
+                #fff;
+
+        }
+
+
+        .shop-empty i {
+
+            display:
+                block;
+
+            margin-bottom:
+                16px;
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                44px;
+
+        }
+
+
+        .shop-empty h3 {
+
+            margin-bottom:
+                9px;
+
+            font-size:
+                27px;
+
+        }
+
+
+        .shop-empty p {
+
+            max-width:
+                470px;
+
+            margin:
+                0 auto 22px;
+
+            color:
+                var(--shop-muted);
+
+        }
+
+
+        /* =========================================================
+           CONSERVATION STATEMENT
+        ========================================================== */
+
+        .shop-conservation {
+
+            padding:
+                120px 0;
+
+            background:
+                #fff;
+
+        }
+
+
+        .conservation-board {
+
+            position:
+                relative;
+
+            min-height:
+                570px;
+
+            overflow:
+                hidden;
+
+            border-radius:
+                38px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            background:
+                var(--shop-dark);
+
+            box-shadow:
+                var(--shop-shadow);
+
+        }
+
+
+        .conservation-copy {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            padding:
+                58px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            color:
+                #fff;
+
+        }
+
+
+        .conservation-copy small {
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .50
+                );
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .14em;
+
+        }
+
+
+        .conservation-copy h2 {
+
+            margin:
+                12px 0 20px;
+
+            color:
+                #fff;
+
+            font-size:
+
+                clamp(
+                    45px,
+                    5vw,
+                    73px
+                );
+
+            line-height:
+                .97;
+
+            letter-spacing:
+                -.05em;
+
+        }
+
+
+        .conservation-copy p {
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .67
+                );
+
+            line-height:
+                1.75;
+
+        }
+
+
+        .conservation-copy
+        .theme-btn {
+
+            width:
+                fit-content;
+
+            margin-top:
+                20px;
+
+        }
+
+
+        .conservation-image {
+
+            position:
+                relative;
+
+            min-height:
+                570px;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .conservation-image img {
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            transition:
+                transform
+                .7s ease;
+
+        }
+
+
+        .conservation-board:hover
+        .conservation-image img {
+
+            transform:
+                scale(
+                    1.04
+                );
+
+        }
+
+
+        .conservation-image::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+
+                linear-gradient(
+
+                    90deg,
+
+                    var(--shop-dark),
+
+                    transparent
+                    30%
+
+                );
+
+        }
+
+
+        .conservation-seal {
+
+            position:
+                absolute;
+
+            right:
+                30px;
+
+            bottom:
+                30px;
+
+            z-index:
+                3;
+
+            width:
+                150px;
+
+            height:
+                150px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .25
+                );
+
+            border-radius:
+                50%;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            padding:
+                22px;
+
+            text-align:
+                center;
+
+            background:
+                rgba(
+                    5,
+                    18,
+                    9,
+                    .52
+                );
+
+            backdrop-filter:
+                blur(
+                    12px
+                );
+
+            color:
+                #fff;
+
+        }
+
+
+        .conservation-seal i {
+
+            display:
+                block;
+
+            margin-bottom:
+                6px;
+
+            font-size:
+                22px;
+
+        }
+
+
+        .conservation-seal strong {
+
+            color:
+                #fff;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.3;
+
+        }
+
+
+        /* =========================================================
+           OVERLAY
+        ========================================================== */
+
+        .shop-overlay {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            z-index:
+                99990;
+
+            background:
+                rgba(
+                    5,
+                    18,
+                    9,
+                    .52
+                );
+
+            opacity:
+                0;
+
+            visibility:
+                hidden;
+
+            transition:
+                .28s ease;
+
+            backdrop-filter:
+                blur(
+                    4px
+                );
+
+        }
+
+
+        .shop-overlay.show {
+
+            opacity:
+                1;
+
+            visibility:
+                visible;
+
+        }
+
+
+        /* =========================================================
+           DRAWERS
+        ========================================================== */
+
+        .shop-drawer {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            right:
+                0;
+
+            z-index:
+                99999;
+
+            width:
+                min(
+                    470px,
+                    100%
+                );
+
+            height:
+                100vh;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            background:
+                #fff;
+
+            box-shadow:
+
+                -20px 0 60px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .16
+                );
+
+            transform:
+                translateX(
+                    105%
+                );
+
+            transition:
+
+                transform
+                .38s
+                cubic-bezier(
+                    .2,
+                    .8,
+                    .2,
+                    1
+                );
+
+        }
+
+
+        .shop-drawer.open {
+
+            transform:
+                none;
+
+        }
+
+
+        .drawer-header {
+
+            min-height:
+                85px;
+
+            padding:
+                20px 24px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            border-bottom:
+                1px solid
+                var(--shop-line);
+
+        }
+
+
+        .drawer-header small {
+
+            display:
+                block;
+
+            margin-bottom:
+                3px;
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                8px;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .13em;
+
+        }
+
+
+        .drawer-header h3 {
+
+            margin:
+                0;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                24px;
+
+        }
+
+
+        .drawer-close {
+
+            width:
+                43px;
+
+            height:
+                43px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                50%;
+
+            background:
+                var(--shop-paper);
+
+            color:
+                var(--shop-ink);
+
+            transition:
+                .2s ease;
+
+        }
+
+
+        .drawer-close:hover {
+
+            transform:
+                rotate(
+                    90deg
+                );
+
+            background:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+        }
+
+
+        .drawer-body {
+
+            flex:
+                1;
+
+            overflow-y:
+                auto;
+
+            padding:
+                24px;
+
+        }
+
+
+        /* =========================================================
+           FILTER DRAWER
+        ========================================================== */
+
+        .filter-group {
+
+            padding-bottom:
+                25px;
+
+            margin-bottom:
+                25px;
+
+            border-bottom:
+                1px solid
+                var(--shop-line);
+
+        }
+
+
+        .filter-group:last-child {
+
+            border-bottom:
+                0;
+
+        }
+
+
+        .filter-title {
+
+            margin-bottom:
+                14px;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .filter-options {
+
+            display:
+                grid;
+
+            gap:
+                8px;
+
+        }
+
+
+        .filter-check {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                12px;
+
+            padding:
+                11px 12px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                13px;
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                12px;
+
+            cursor:
+                pointer;
+
+            transition:
+                .2s ease;
+
+        }
+
+
+        .filter-check:hover {
+
+            background:
+                var(--shop-paper);
+
+        }
+
+
+        .filter-check input {
+
+            accent-color:
+                var(--shop-green);
+
+        }
+
+
+        .tag-cloud {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                7px;
+
+        }
+
+
+        .tag-filter {
+
+            padding:
+                8px 12px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                99px;
+
+            background:
+                var(--shop-paper);
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+            transition:
+                .2s ease;
+
+        }
+
+
+        .tag-filter.active {
+
+            background:
+                var(--shop-dark);
+
+            border-color:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+        }
+
+
+        .price-filter-box {
+
+            padding:
+                16px;
+
+            border-radius:
+                15px;
+
+            background:
+                var(--shop-paper);
+
+        }
+
+
+        .price-filter-line {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            margin-bottom:
+                10px;
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                11px;
+
+        }
+
+
+        .price-filter-line strong {
+
+            color:
+                var(--shop-ink);
+
+        }
+
+
+        #priceRange {
+
+            width:
+                100%;
+
+            accent-color:
+                var(--shop-green);
+
+        }
+
+
+        .filter-footer {
+
+            padding:
+                18px 24px;
+
+            border-top:
+                1px solid
+                var(--shop-line);
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                10px;
+
+        }
+
+
+        .filter-footer button {
+
+            min-height:
+                47px;
+
+            border-radius:
+                99px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .filter-reset {
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            background:
+                var(--shop-paper);
+
+            color:
+                var(--shop-ink);
+
+        }
+
+
+        .filter-apply {
+
+            border:
+                0;
+
+            background:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+        }
+
+
+        /* =========================================================
+           CART DRAWER
+        ========================================================== */
+
+        .cart-items {
+
+            display:
+                grid;
+
+            gap:
+                13px;
+
+        }
+
+
+        .cart-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                78px 1fr;
+
+            gap:
+                14px;
+
+            padding:
+                12px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                18px;
+
+            background:
+                #fff;
+
+        }
+
+
+        .cart-item-image {
+
+            width:
+                78px;
+
+            height:
+                92px;
+
+            overflow:
+                hidden;
+
+            border-radius:
+                12px;
+
+            background:
+                var(--shop-paper);
+
+        }
+
+
+        .cart-item-image img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+        }
+
+
+        .cart-item-content {
+
+            min-width:
+                0;
+
+        }
+
+
+        .cart-item-content h4 {
+
+            margin:
+                3px 0 5px;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.25;
+
+        }
+
+
+        .cart-item-price {
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .cart-item-controls {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                10px;
+
+            margin-top:
+                12px;
+
+        }
+
+
+        .qty-controller {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                3px;
+
+            padding:
+                3px;
+
+            border:
+                1px solid
+                var(--shop-line);
+
+            border-radius:
+                99px;
+
+            background:
+                var(--shop-paper);
+
+        }
+
+
+        .qty-controller button {
+
+            width:
+                29px;
+
+            height:
+                29px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                0;
+
+            border-radius:
+                50%;
+
+            background:
+                #fff;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                10px;
+
+        }
+
+
+        .qty-controller span {
+
+            min-width:
+                28px;
+
+            text-align:
+                center;
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .cart-remove {
+
+            padding:
+                0;
+
+            border:
+                0;
+
+            background:
+                transparent;
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .cart-remove:hover {
+
+            color:
+                #b43b3b;
+
+        }
+
+
+        .cart-empty {
+
+            padding:
+                65px 20px;
+
+            text-align:
+                center;
+
+        }
+
+
+        .cart-empty-icon {
+
+            width:
+                75px;
+
+            height:
+                75px;
+
+            margin:
+                0 auto 18px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--shop-paper);
+
+            color:
+                var(--shop-green);
+
+            font-size:
+                26px;
+
+        }
+
+
+        .cart-empty h4 {
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        .cart-empty p {
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                12px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        .cart-footer {
+
+            padding:
+                19px 24px 24px;
+
+            border-top:
+                1px solid
+                var(--shop-line);
+
+            background:
+                #fff;
+
+        }
+
+
+        .cart-summary-row {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                12px;
+
+            margin-bottom:
+                16px;
+
+        }
+
+
+        .cart-summary-row small {
+
+            color:
+                var(--shop-muted);
+
+            font-size:
+                10px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .cart-summary-row strong {
+
+            color:
+                var(--shop-ink);
+
+            font-size:
+                25px;
+
+        }
+
+
+        .checkout-button {
+
+            width:
+                100%;
+
+            min-height:
+                53px;
+
+            border-radius:
+                99px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                12px;
+
+            padding:
+                0 20px;
+
+            background:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .checkout-button:hover {
+
+            transform:
+                translateY(
+                    -2px
+                );
+
+            color:
+                #fff;
+
+            background:
+                var(--shop-green);
+
+        }
+
+
+        /* =========================================================
+           FLOATING BAG
+        ========================================================== */
+
+        .floating-bag {
+
+            position:
+                fixed;
+
+            right:
+                22px;
+
+            bottom:
+                22px;
+
+            z-index:
+                9990;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            padding:
+                8px 8px 8px 17px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .10
+                );
+
+            border-radius:
+                99px;
+
+            background:
+                var(--shop-dark);
+
+            color:
+                #fff;
+
+            box-shadow:
+
+                0 17px 45px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .20
+                );
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transform:
+                translateY(
+                    80px
+                );
+
+            transition:
+                .3s ease;
+
+        }
+
+
+        .floating-bag.show {
+
+            opacity:
+                1;
+
+            pointer-events:
+                auto;
+
+            transform:
+                none;
+
+        }
+
+
+        .floating-bag-copy strong {
+
+            display:
+                block;
+
+            color:
+                #fff;
+
+            font-size:
+                12px;
+
+        }
+
+
+        .floating-bag-copy span {
+
+            display:
+                block;
+
+            margin-top:
+                1px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .57
+                );
+
+            font-size:
+                10px;
+
+        }
+
+
+        .floating-bag button {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                0;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--shop-green);
+
+            color:
+                #fff;
+
+        }
+
+
+        /* =========================================================
+           TOAST
+        ========================================================== */
+
+        .shop-toast {
+
+            position:
+                fixed;
+
+            left:
+                50%;
+
+            bottom:
+                25px;
+
+            z-index:
+                100001;
+
+            max-width:
+                calc(
+                    100% - 30px
+                );
+
+            padding:
+                12px 18px;
+
+            border-radius:
+                99px;
+
+            background:
+                rgba(
+                    8,
+                    24,
+                    12,
+                    .96
+                );
+
+            color:
+                #fff;
+
+            font-size:
+                12px;
+
+            box-shadow:
+
+                0 12px 34px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .18
+                );
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transform:
+                translate(
+                    -50%,
+                    20px
+                );
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .shop-toast.show {
+
+            opacity:
+                1;
+
+            transform:
+                translate(
+                    -50%,
+                    0
+                );
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================== */
+
+        @media (
+            max-width:
+            1199px
+        ) {
+
+            .product-gallery {
+
+                grid-template-columns:
+
+                    repeat(
+                        2,
+                        minmax(
+                            0,
+                            1fr
+                        )
+                    );
+
+            }
+
+
+            .product-card.wide {
+
+                grid-column:
+                    span 2;
+
+            }
+
+        }
+
+
+        @media (
+            max-width:
+            991px
+        ) {
+
+            .shop-opening-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .mission-receipt {
+
+                justify-self:
+                    start;
+
+            }
+
+
+            .catalog-head {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    18px;
+
+            }
+
+
+            .catalog-head p {
+
+                justify-self:
+                    start;
+
+            }
+
+
+            .category-rail {
+
+                top:
+                    72px;
+
+            }
+
+
+            .product-card.wide
+            .product-card-shell {
+
+                display:
+                    block;
+
+            }
+
+
+            .conservation-board {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .conservation-image {
+
+                min-height:
+                    450px;
+
+            }
+
+        }
+
+
+        @media (
+            max-width:
+            767px
+        ) {
+
+            .shop-opening {
+
+                padding:
+                    75px 0 55px;
+
+            }
+
+
+            .opening-copy h1 {
+
+                font-size:
+                    57px;
+
+            }
+
+
+            .shop-facts-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .shop-fact
+            + .shop-fact {
+
+                border-left:
+                    0;
+
+                border-top:
+                    1px solid
+                    var(--shop-line);
+
+            }
+
+
+            .catalog-area {
+
+                padding:
+                    85px 0 100px;
+
+            }
+
+
+            .catalog-toolbar {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .catalog-search {
+
+                grid-column:
+                    1 / -1;
+
+            }
+
+
+            .catalog-sort {
+
+                min-width:
+                    0;
+
+                width:
+                    100%;
+
+            }
+
+
+            .filter-trigger {
+
+                width:
+                    100%;
+
+                justify-content:
+                    center;
+
+            }
+
+
+            .product-gallery {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .product-card.wide {
+
+                grid-column:
+                    span 1;
+
+            }
+
+
+            .product-card.wide
+            .product-title {
+
+                font-size:
+                    22px;
+
+            }
+
+
+            .conservation-copy {
+
+                padding:
+                    35px;
+
+            }
+
+
+            .shop-conservation {
+
+                padding:
+                    90px 0;
+
+            }
+
+        }
+
+
+        @media (
+            max-width:
+            575px
+        ) {
+
+            .opening-copy h1 {
+
+                font-size:
+                    48px;
+
+            }
+
+
+            .opening-description {
+
+                font-size:
+                    15px;
+
+            }
+
+
+            .opening-actions {
+
+                display:
+                    grid;
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .opening-actions
+            .theme-btn,
+            .opening-secondary {
+
+                width:
+                    100%;
+
+                justify-content:
+                    center;
+
+            }
+
+
+            .mission-receipt {
+
+                padding:
+                    12px;
+
+            }
+
+
+            .receipt-inner {
+
+                padding:
+                    22px;
+
+            }
+
+
+            .catalog-head h2 {
+
+                font-size:
+                    42px;
+
+            }
+
+
+            .catalog-result-line {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .product-image,
+            .product-card:not(.wide)
+            .product-image {
+
+                min-height:
+                    295px;
+
+                height:
+                    295px;
+
+            }
+
+
+            .conservation-copy h2 {
+
+                font-size:
+                    44px;
+
+            }
+
+
+            .conservation-image {
+
+                min-height:
+                    380px;
+
+            }
+
+
+            .conservation-seal {
+
+                width:
+                    125px;
+
+                height:
+                    125px;
+
+            }
+
+
+            .floating-bag {
+
+                right:
+                    12px;
+
+                bottom:
+                    12px;
+
+            }
+
+        }
+
+
+        @media (
+            prefers-reduced-motion:
+            reduce
+        ) {
+
+            html {
+
+                scroll-behavior:
+                    auto;
+
+            }
+
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    .01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    .01ms !important;
+
+            }
+
+        }
+
+    
+        /* =========================================================
+           BIOWILD SHARED HEADER
+           Replaced with the header used on the main BioWild site
+        ========================================================== */
+
+        :root {
+            --bio-accent: var(--shop-green);
+            --bio-accent-rgb: var(--shop-green-rgb);
+            --bio-dark: var(--shop-dark);
+            --bio-ink: var(--shop-ink);
+            --bio-paper: var(--shop-paper);
+        }
+
+        body.bio-menu-open {
+            overflow: hidden;
+        }
+
+        .bio-topbar {
+            position: relative;
+            z-index: 9991;
+            background: var(--bio-dark);
+            color: rgba(255,255,255,.78);
+            font-size: 12px;
+        }
+
+        .bio-topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .bio-topbar a,
+        .bio-topbar span {
+            color: inherit;
+        }
+
+        .bio-topbar-left,
+        .bio-topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .bio-topbar i {
+            margin-right: 7px;
+            color: #fff;
+        }
+
+        .bio-header {
+            position: sticky;
+            top: 0;
+            z-index: 9990;
+            background: rgba(255,255,255,.88);
+            backdrop-filter: blur(18px) saturate(140%);
+            -webkit-backdrop-filter: blur(18px) saturate(140%);
+            border-bottom: 1px solid rgba(0,0,0,.05);
+        }
+
+        .bio-nav {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .bio-logo {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .bio-logo img {
+            max-height: 48px;
+            width: auto;
+        }
+
+        .bio-main-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .bio-main-links > li {
+            position: relative;
+        }
+
+        .bio-main-links > li > a {
+            position: relative;
+            display: block;
+            padding: 28px 0;
+            color: var(--bio-ink);
+            font-weight: 650;
+            font-size: 14px;
+        }
+
+        .bio-main-links > li > a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 20px;
+            height: 2px;
+            background: var(--bio-accent);
+            transition: right .25s ease;
+        }
+
+        .bio-main-links > li:hover > a::after,
+        .bio-main-links > li.active > a::after {
+            right: 0;
+        }
+
+        .bio-dropdown {
+            position: absolute;
+            left: -18px;
+            top: calc(100% - 7px);
+            min-width: 210px;
+            padding: 10px;
+            margin: 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,.07);
+            border-radius: 16px;
+            box-shadow: 0 18px 50px rgba(0,0,0,.12);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: .22s ease;
+        }
+
+        .bio-main-links li:hover > .bio-dropdown {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: none;
+        }
+
+        .bio-dropdown a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: var(--bio-ink);
+            font-size: 13px;
+        }
+
+        .bio-dropdown a:hover {
+            background: rgba(var(--bio-accent-rgb), .07);
+            color: var(--bio-accent);
+        }
+
+        .bio-nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .bio-icon-btn {
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: var(--bio-paper);
+            color: var(--bio-ink);
+            display: grid;
+            place-items: center;
+            position: relative;
+            transition: .2s ease;
+            flex: 0 0 44px;
+        }
+
+        .bio-icon-btn:hover {
+            transform: translateY(-2px);
+            background: rgba(var(--bio-accent-rgb), .10);
+            color: var(--bio-accent);
+        }
+
+        #headerCartCount {
+            position: absolute;
+            right: -3px;
+            top: -2px;
+            min-width: 19px;
+            height: 19px;
+            padding: 0 5px;
+            border-radius: 99px;
+            background: var(--bio-accent);
+            color: #fff;
+            font-size: 10px;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+        }
+
+        .bio-buy-btn {
+            white-space: nowrap;
+        }
+
+        .bio-mobile-toggle {
+            display: none;
+        }
+
+        .bio-mobile-menu {
+            position: fixed;
+            inset: 0;
+            z-index: 100000;
+            background: rgba(8,23,12,.98);
+            color: #fff;
+            padding: 90px 25px 35px;
+            transform: translateX(100%);
+            transition: .35s cubic-bezier(.2,.8,.2,1);
+            overflow: auto;
+        }
+
+        .bio-mobile-menu.open {
+            transform: none;
+        }
+
+        .bio-mobile-menu a {
+            color: #fff;
+        }
+
+        .bio-mobile-close {
+            position: absolute;
+            right: 24px;
+            top: 22px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,.18);
+            background: transparent;
+            color: #fff;
+        }
+
+        .mobile-menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu-list > li {
+            border-bottom: 1px solid rgba(255,255,255,.12);
+        }
+
+        .mobile-menu-list > li > a {
+            display: block;
+            padding: 18px 0;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -.02em;
+        }
+
+        .mobile-sub {
+            list-style: none;
+            padding: 0 0 14px 18px;
+            margin: 0;
+        }
+
+        .mobile-sub a {
+            display: block;
+            padding: 7px 0;
+            opacity: .65;
+        }
+
+        @media (max-width: 1199px) {
+            .bio-main-links {
+                gap: 16px;
+            }
+
+            .bio-main-links > li > a {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .bio-topbar {
+                display: none;
+            }
+
+            .bio-main-links,
+            .bio-buy-btn {
+                display: none;
+            }
+
+            .bio-mobile-toggle {
+                display: grid;
+            }
+
+            .bio-nav {
+                min-height: 70px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .bio-logo img {
+                max-height: 42px;
+            }
+
+            .bio-nav-actions {
+                gap: 6px;
+            }
+
+            .bio-icon-btn {
+                width: 41px;
+                height: 41px;
+                flex-basis: 41px;
+            }
+        }
+
+
+    </style>
+
+
+    <!-- =========================================================
+         BIOWILD SANCTUARY TICKET EXPERIENCE
+    ========================================================== -->
+    <style>
+        :root{
+            --ticket-green:var(--shop-green,#2e7d32);
+            --ticket-green-rgb:var(--shop-green-rgb,46,125,50);
+            --ticket-dark:var(--shop-dark,#0b2111);
+            --ticket-ink:var(--shop-ink,#152119);
+            --ticket-muted:var(--shop-muted,#6d786f);
+            --ticket-paper:var(--shop-paper,#f4f8f4);
+            --ticket-paper-2:var(--shop-paper-2,#edf4ee);
+            --ticket-line:var(--shop-line,rgba(18,55,27,.11));
+            --ticket-shadow:0 30px 90px rgba(13,48,22,.14);
+        }
+
+        body.ticket-modal-open{overflow:hidden;}
+        .ticket-reveal{opacity:0;transform:translateY(30px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
+        .ticket-reveal.visible{opacity:1;transform:none}
+
+        /* OPENING — editorial, not a slider */
+        .ticket-opening{position:relative;overflow:hidden;padding:92px 0 86px;background:#fff;isolation:isolate}
+        .ticket-opening::before{content:"VISIT";position:absolute;right:-30px;top:-92px;z-index:-2;color:rgba(21,33,25,.027);font-size:clamp(150px,25vw,360px);font-weight:900;line-height:1;letter-spacing:-.08em;pointer-events:none}
+        .ticket-opening::after{content:"";position:absolute;left:-340px;bottom:-410px;z-index:-1;width:780px;height:780px;border-radius:50%;border:1px solid rgba(var(--ticket-green-rgb),.11);box-shadow:0 0 0 100px rgba(var(--ticket-green-rgb),.026),0 0 0 200px rgba(var(--ticket-green-rgb),.013)}
+        .ticket-opening-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(430px,1.08fr);gap:78px;align-items:center}
+        .ticket-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;color:var(--ticket-green);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.18em}
+        .ticket-eyebrow::before{content:"";width:40px;height:2px;background:var(--ticket-green)}
+        .ticket-opening-copy h1{max-width:770px;margin:0 0 26px;color:var(--ticket-ink);font-size:clamp(58px,7vw,104px);line-height:.9;letter-spacing:-.064em;text-wrap:balance}
+        .ticket-opening-copy h1 span{color:var(--ticket-green)}
+        .ticket-opening-copy>p{max-width:650px;margin:0;color:var(--ticket-muted);font-size:16px;line-height:1.85}
+        .ticket-opening-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+        .ticket-opening-actions .theme-btn{margin:0}
+        .ticket-outline-btn{min-height:50px;padding:0 20px;border:1px solid var(--ticket-line);border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--ticket-paper);color:var(--ticket-ink);font-size:12px;font-weight:700;transition:.25s ease}
+        .ticket-outline-btn:hover{transform:translateY(-2px);background:#fff;border-color:rgba(var(--ticket-green-rgb),.35);color:var(--ticket-green)}
+        .ticket-opening-notes{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px;color:var(--ticket-muted);font-size:10px}
+        .ticket-opening-notes span{display:inline-flex;align-items:center;gap:7px}.ticket-opening-notes i{color:var(--ticket-green)}
+
+        /* LIVE BOARDING PASS */
+        .sanctuary-pass-wrap{position:relative;width:100%;max-width:610px;justify-self:end;filter:drop-shadow(0 30px 50px rgba(7,33,14,.17));transform:rotate(1.2deg);transition:.35s ease}
+        .sanctuary-pass-wrap:hover{transform:rotate(0) translateY(-6px)}
+        .sanctuary-pass{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 155px;border-radius:30px;background:#fff}
+        .sanctuary-pass::before,.sanctuary-pass::after{content:"";position:absolute;z-index:4;right:139px;width:32px;height:32px;border-radius:50%;background:#fff;transform:translateX(50%)}
+        .sanctuary-pass::before{top:-16px}.sanctuary-pass::after{bottom:-16px}
+        .pass-main{padding:31px}.pass-side{position:relative;padding:24px 20px;display:flex;align-items:center;justify-content:center;background:var(--ticket-dark);color:#fff}
+        .pass-side::before{content:"";position:absolute;left:0;top:28px;bottom:28px;border-left:1px dashed rgba(255,255,255,.28)}
+        .pass-brand{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:28px}
+        .pass-brand-mark{display:flex;align-items:center;gap:11px}.pass-brand-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:var(--ticket-dark);color:#fff}
+        .pass-brand strong{display:block;color:var(--ticket-ink);font-size:15px}.pass-brand small{display:block;margin-top:1px;color:var(--ticket-muted);font-size:8px;text-transform:uppercase;letter-spacing:.13em}
+        .pass-status{padding:7px 10px;border-radius:99px;background:var(--ticket-paper);color:var(--ticket-green);font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.11em}
+        .pass-route{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:24px}
+        .pass-point small{display:block;color:var(--ticket-muted);font-size:8px;text-transform:uppercase;letter-spacing:.12em}.pass-point strong{display:block;margin-top:3px;color:var(--ticket-ink);font-size:20px}
+        .pass-line{position:relative;height:1px;background:var(--ticket-line)}.pass-line::before{content:"";position:absolute;left:50%;top:50%;width:34px;height:34px;border:1px solid var(--ticket-line);border-radius:50%;background:#fff;transform:translate(-50%,-50%)}.pass-line i{position:absolute;left:50%;top:50%;z-index:2;color:var(--ticket-green);font-size:12px;transform:translate(-50%,-50%)}
+        .pass-details{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.pass-detail{padding:11px;border:1px solid var(--ticket-line);border-radius:13px;background:var(--ticket-paper)}.pass-detail small{display:block;color:var(--ticket-muted);font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.pass-detail strong{display:block;margin-top:4px;color:var(--ticket-ink);font-size:11px}
+        .pass-side-content{text-align:center}.pass-side-content i{display:block;margin-bottom:14px;font-size:26px}.pass-side-content small{display:block;color:rgba(255,255,255,.45);font-size:7px;text-transform:uppercase;letter-spacing:.13em}.pass-side-content strong{display:block;margin:4px 0 15px;color:#fff;font-size:25px}
+        .pass-bars{display:flex;height:46px;justify-content:center;align-items:end;gap:3px}.pass-bars span{display:block;width:3px;background:rgba(255,255,255,.68)}.pass-bars span:nth-child(1){height:21px}.pass-bars span:nth-child(2){height:39px}.pass-bars span:nth-child(3){height:29px}.pass-bars span:nth-child(4){height:43px}.pass-bars span:nth-child(5){height:34px}.pass-bars span:nth-child(6){height:24px}.pass-bars span:nth-child(7){height:41px}.pass-bars span:nth-child(8){height:18px}.pass-bars span:nth-child(9){height:36px}
+
+        /* JOURNEY STRIP */
+        .ticket-journey{background:var(--ticket-dark);color:#fff}.ticket-journey-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+        .ticket-journey-item{min-height:112px;padding:20px 24px;display:flex;align-items:center;gap:14px}.ticket-journey-item+.ticket-journey-item{border-left:1px solid rgba(255,255,255,.1)}
+        .ticket-journey-number{color:rgba(255,255,255,.24);font-size:31px;font-weight:800;line-height:1}.ticket-journey-item strong{display:block;color:#fff;font-size:12px}.ticket-journey-item span{display:block;margin-top:3px;color:rgba(255,255,255,.5);font-size:10px}
+
+        /* BUILDER */
+        .ticket-builder{padding:120px 0 125px;background:var(--ticket-paper)}
+        .ticket-section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:end;margin-bottom:52px}
+        .ticket-section-label{color:var(--ticket-green);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.18em}.ticket-section-head h2{margin:8px 0 0;color:var(--ticket-ink);font-size:clamp(44px,5.7vw,76px);line-height:.99;letter-spacing:-.05em}.ticket-section-head p{max-width:650px;justify-self:end;margin:0;color:var(--ticket-muted);line-height:1.78}
+        .ticket-builder-layout{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:28px;align-items:start}
+        .ticket-form-panel{padding:24px;border:1px solid var(--ticket-line);border-radius:31px;background:#fff;box-shadow:var(--ticket-shadow)}
+        .ticket-step{padding:27px;margin-bottom:14px;border:1px solid var(--ticket-line);border-radius:22px;background:var(--ticket-paper)}.ticket-step:last-child{margin-bottom:0}
+        .ticket-step-head{display:grid;grid-template-columns:45px 1fr;gap:14px;align-items:center;margin-bottom:23px}.ticket-step-number{width:45px;height:45px;display:grid;place-items:center;border-radius:50%;background:var(--ticket-dark);color:#fff;font-size:10px;font-weight:800}.ticket-step-head small{display:block;color:var(--ticket-green);font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}.ticket-step-head h3{margin:3px 0 0;color:var(--ticket-ink);font-size:22px}
+
+        .ticket-types{display:grid;gap:9px}.ticket-type-row{display:grid;grid-template-columns:48px 1fr auto auto;gap:13px;align-items:center;padding:14px;border:1px solid var(--ticket-line);border-radius:17px;background:#fff;transition:.22s ease}.ticket-type-row:hover{transform:translateX(4px);border-color:rgba(var(--ticket-green-rgb),.3)}
+        .ticket-type-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:var(--ticket-paper);color:var(--ticket-green)}.ticket-type-copy strong{display:block;color:var(--ticket-ink);font-size:13px}.ticket-type-copy span{display:block;margin-top:2px;color:var(--ticket-muted);font-size:10px}.ticket-type-price{color:var(--ticket-ink);font-size:19px;font-weight:800}
+        .ticket-qty{display:flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--ticket-line);border-radius:99px;background:var(--ticket-paper)}.ticket-qty button{width:31px;height:31px;border:0;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--ticket-ink);font-size:9px;transition:.2s ease}.ticket-qty button:hover{background:var(--ticket-dark);color:#fff}.ticket-qty span{min-width:28px;text-align:center;color:var(--ticket-ink);font-size:11px;font-weight:800}
+
+        .ticket-field{margin-bottom:14px}.ticket-field:last-child{margin-bottom:0}.ticket-field label{display:block;margin-bottom:7px;color:var(--ticket-muted);font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}.ticket-field input,.ticket-field select,.ticket-field textarea{width:100%;min-height:53px;padding:13px 15px;border:1px solid var(--ticket-line);border-radius:13px;outline:0;background:#fff;color:var(--ticket-ink);transition:.2s ease}.ticket-field textarea{min-height:115px;resize:vertical}.ticket-field input:focus,.ticket-field select:focus,.ticket-field textarea:focus{border-color:var(--ticket-green);box-shadow:0 0 0 4px rgba(var(--ticket-green-rgb),.08)}
+        .ticket-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .ticket-time-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.ticket-time-slot{padding:13px 10px;border:1px solid var(--ticket-line);border-radius:14px;background:#fff;color:var(--ticket-muted);text-align:center;transition:.2s ease}.ticket-time-slot strong{display:block;color:inherit;font-size:12px}.ticket-time-slot span{display:block;margin-top:2px;font-size:8px;opacity:.72}.ticket-time-slot:hover{border-color:var(--ticket-green);color:var(--ticket-green)}.ticket-time-slot.active{background:var(--ticket-dark);border-color:var(--ticket-dark);color:#fff}
+        .ticket-methods{display:grid;grid-template-columns:1fr 1fr;gap:9px}.ticket-method{position:relative;padding:17px;border:1px solid var(--ticket-line);border-radius:16px;background:#fff;cursor:pointer;transition:.2s ease}.ticket-method input{position:absolute;opacity:0;pointer-events:none}.ticket-method.active{border-color:var(--ticket-green);box-shadow:0 0 0 3px rgba(var(--ticket-green-rgb),.07)}.ticket-method-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--ticket-paper);color:var(--ticket-green);margin-bottom:13px}.ticket-method strong{display:block;color:var(--ticket-ink);font-size:13px}.ticket-method span{display:block;margin-top:3px;color:var(--ticket-muted);font-size:9px;line-height:1.45}.ticket-method.disabled{opacity:.48;cursor:not-allowed}.ticket-method.disabled::after{content:"Coming soon";position:absolute;right:10px;top:10px;padding:5px 7px;border-radius:99px;background:var(--ticket-paper);color:var(--ticket-muted);font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+        .ticket-consent{display:flex;gap:9px;align-items:flex-start;margin-top:14px;color:var(--ticket-muted);font-size:10px;line-height:1.55}.ticket-consent input{margin-top:3px;accent-color:var(--ticket-green)}.ticket-consent a{color:var(--ticket-green);font-weight:700}
+
+        /* SUMMARY */
+        .ticket-summary{position:sticky;top:100px;overflow:hidden;border-radius:29px;background:var(--ticket-dark);color:#fff;box-shadow:var(--ticket-shadow)}
+        .ticket-summary-image{position:relative;height:190px;overflow:hidden}.ticket-summary-image img{width:100%;height:100%;object-fit:cover}.ticket-summary-image::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ticket-dark),transparent 67%)}
+        .ticket-summary-destination{position:absolute;left:24px;bottom:18px;z-index:2}.ticket-summary-destination small{display:block;color:rgba(255,255,255,.5);font-size:8px;text-transform:uppercase;letter-spacing:.12em}.ticket-summary-destination strong{display:block;margin-top:3px;color:#fff;font-size:21px}
+        .ticket-summary-body{padding:25px}.ticket-summary-title{margin:0 0 17px;color:#fff;font-size:20px}.ticket-summary-row{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.55);font-size:10px}.ticket-summary-row strong{max-width:62%;color:#fff;text-align:right;font-size:10px}
+        .ticket-summary-list{padding:15px 0}.ticket-summary-item{display:flex;justify-content:space-between;gap:14px;margin-bottom:7px;color:rgba(255,255,255,.62);font-size:10px}.ticket-summary-item strong{color:#fff}.ticket-summary-empty{color:rgba(255,255,255,.4);font-size:10px}
+        .ticket-summary-total{display:flex;justify-content:space-between;align-items:end;gap:14px;padding-top:19px;border-top:1px solid rgba(255,255,255,.13)}.ticket-summary-total small{display:block;color:rgba(255,255,255,.45);font-size:8px;text-transform:uppercase;letter-spacing:.12em}.ticket-summary-total strong{display:block;margin-top:2px;color:#fff;font-size:37px;line-height:1}.ticket-summary-count{color:rgba(255,255,255,.47);font-size:9px;text-align:right}
+        .ticket-confirm-btn{width:100%;min-height:55px;margin-top:22px;padding:0 19px;border:0;border-radius:99px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--ticket-green);color:#fff;font-size:12px;font-weight:800;transition:.25s ease}.ticket-confirm-btn:hover{transform:translateY(-3px);background:#fff;color:var(--ticket-dark)}
+        .ticket-summary-note{display:flex;gap:8px;align-items:flex-start;margin-top:14px;color:rgba(255,255,255,.43);font-size:8px;line-height:1.55}
+
+        /* INCLUDED */
+        .ticket-included{padding:115px 0;background:#fff}.ticket-included-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.ticket-included-card{min-height:250px;padding:24px;border:1px solid var(--ticket-line);border-radius:23px;display:flex;flex-direction:column;background:var(--ticket-paper);transition:.3s ease}.ticket-included-card:hover{transform:translateY(-7px);background:#fff;box-shadow:var(--ticket-shadow)}.ticket-included-icon{width:53px;height:53px;display:grid;place-items:center;border-radius:50%;margin-bottom:auto;background:#fff;color:var(--ticket-green);font-size:18px}.ticket-included-card small{display:block;margin-top:36px;color:var(--ticket-green);font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}.ticket-included-card h3{margin:5px 0 8px;color:var(--ticket-ink);font-size:19px}.ticket-included-card p{margin:0;color:var(--ticket-muted);font-size:11px;line-height:1.65}
+
+        /* VISIT BOARD */
+        .ticket-visit-info{padding:0 0 120px;background:#fff}.ticket-visit-board{display:grid;grid-template-columns:.95fr 1.05fr;min-height:570px;overflow:hidden;border-radius:35px;background:var(--ticket-dark);box-shadow:var(--ticket-shadow)}.ticket-visit-image{position:relative;min-height:570px;overflow:hidden}.ticket-visit-image img{width:100%;height:100%;object-fit:cover;transition:.7s ease}.ticket-visit-board:hover .ticket-visit-image img{transform:scale(1.04)}.ticket-visit-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,var(--ticket-dark))}.ticket-visit-copy{padding:54px;display:flex;flex-direction:column;justify-content:center;color:#fff}.ticket-visit-copy .ticket-section-label{color:rgba(255,255,255,.5)}.ticket-visit-copy h2{margin:9px 0 18px;color:#fff;font-size:clamp(42px,5vw,66px);line-height:.98;letter-spacing:-.05em}.ticket-visit-copy>p{color:rgba(255,255,255,.63);line-height:1.75}.ticket-visit-list{display:grid;gap:9px;margin-top:25px}.ticket-visit-item{display:grid;grid-template-columns:43px 1fr;gap:11px;align-items:center;padding:11px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.05)}.ticket-visit-item i{width:43px;height:43px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.08);color:#fff}.ticket-visit-item small{display:block;color:rgba(255,255,255,.4);font-size:8px;text-transform:uppercase;letter-spacing:.12em}.ticket-visit-item strong,.ticket-visit-item a{display:block;margin-top:2px;color:#fff;font-size:11px}
+
+        /* CONFIRM MODAL */
+        .ticket-modal{position:fixed;inset:0;z-index:100100;display:grid;place-items:center;padding:20px;background:rgba(5,18,9,.64);backdrop-filter:blur(7px);opacity:0;visibility:hidden;transition:.25s ease}.ticket-modal.show{opacity:1;visibility:visible}.ticket-modal-card{width:min(590px,100%);max-height:calc(100vh - 40px);overflow:auto;border-radius:28px;background:#fff;box-shadow:0 35px 100px rgba(0,0,0,.28);transform:translateY(20px) scale(.98);transition:.3s ease}.ticket-modal.show .ticket-modal-card{transform:none}.ticket-modal-head{position:relative;padding:32px 32px 25px;background:var(--ticket-dark);color:#fff}.ticket-modal-head small{display:block;color:rgba(255,255,255,.45);font-size:8px;text-transform:uppercase;letter-spacing:.13em}.ticket-modal-head h3{margin:6px 45px 0 0;color:#fff;font-size:31px}.ticket-modal-close{position:absolute;right:22px;top:22px;width:40px;height:40px;border:1px solid rgba(255,255,255,.16);border-radius:50%;display:grid;place-items:center;background:transparent;color:#fff;transition:.2s ease}.ticket-modal-close:hover{background:#fff;color:var(--ticket-dark);transform:rotate(90deg)}.ticket-modal-body{padding:30px}.ticket-modal-summary{padding:20px;border-radius:18px;background:var(--ticket-paper);border:1px solid var(--ticket-line)}.ticket-modal-summary-row{display:flex;justify-content:space-between;gap:18px;padding:8px 0;color:var(--ticket-muted);font-size:11px}.ticket-modal-summary-row strong{color:var(--ticket-ink);text-align:right}.ticket-modal-total{margin-top:10px;padding-top:14px;border-top:1px solid var(--ticket-line);display:flex;justify-content:space-between;align-items:end}.ticket-modal-total span{color:var(--ticket-muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em}.ticket-modal-total strong{color:var(--ticket-dark);font-size:30px}.ticket-modal-message{margin:18px 0 0;color:var(--ticket-muted);font-size:11px;line-height:1.65}.ticket-modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:20px}.ticket-modal-actions button,.ticket-modal-actions a{min-height:50px;border-radius:99px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:800}.ticket-modal-secondary{border:1px solid var(--ticket-line);background:var(--ticket-paper);color:var(--ticket-ink)}.ticket-modal-primary{border:0;background:var(--ticket-green);color:#fff}.ticket-modal-primary:hover{color:#fff;background:var(--ticket-dark)}
+
+        .ticket-toast{position:fixed;left:50%;bottom:26px;z-index:100200;max-width:calc(100% - 30px);padding:12px 18px;border-radius:99px;background:rgba(8,24,12,.96);color:#fff;font-size:12px;box-shadow:0 12px 34px rgba(0,0,0,.18);opacity:0;pointer-events:none;transform:translate(-50%,20px);transition:.25s ease}.ticket-toast.show{opacity:1;transform:translate(-50%,0)}
+
+        @media(max-width:1199px){.ticket-builder-layout{grid-template-columns:minmax(0,1fr) 340px}.ticket-included-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:991px){.ticket-opening-grid{grid-template-columns:1fr}.sanctuary-pass-wrap{justify-self:start}.ticket-journey-grid{grid-template-columns:repeat(2,1fr)}.ticket-journey-item:nth-child(3){border-left:0;border-top:1px solid rgba(255,255,255,.1)}.ticket-journey-item:nth-child(4){border-top:1px solid rgba(255,255,255,.1)}.ticket-section-head{grid-template-columns:1fr;gap:17px}.ticket-section-head p{justify-self:start}.ticket-builder-layout{grid-template-columns:1fr}.ticket-summary{position:relative;top:auto}.ticket-visit-board{grid-template-columns:1fr}.ticket-visit-image{min-height:430px}.ticket-visit-image::after{background:linear-gradient(0deg,var(--ticket-dark),transparent 42%)}}
+        @media(max-width:767px){.ticket-opening{padding:70px 0 80px}.ticket-opening-copy h1{font-size:52px}.sanctuary-pass{grid-template-columns:1fr}.sanctuary-pass::before,.sanctuary-pass::after{display:none}.pass-side{min-height:140px}.pass-side::before{left:24px;right:24px;top:0;bottom:auto;border-left:0;border-top:1px dashed rgba(255,255,255,.28)}.pass-side-content{display:flex;align-items:center;gap:24px}.pass-side-content i{margin:0}.ticket-builder{padding:90px 0}.ticket-form-panel{padding:17px}.ticket-step{padding:21px}.ticket-type-row{grid-template-columns:45px 1fr auto}.ticket-type-price{grid-column:2}.ticket-qty{grid-column:3;grid-row:1/3}.ticket-field-grid,.ticket-methods{grid-template-columns:1fr}.ticket-time-slots{grid-template-columns:1fr}.ticket-included{padding:90px 0}.ticket-visit-info{padding-bottom:90px}}
+        @media(max-width:575px){.ticket-opening-copy h1{font-size:45px}.ticket-opening-actions{display:grid;grid-template-columns:1fr}.ticket-opening-actions .theme-btn,.ticket-outline-btn{width:100%;justify-content:center}.pass-main{padding:22px}.pass-route{grid-template-columns:1fr}.pass-line{display:none}.pass-details{grid-template-columns:1fr}.ticket-journey-grid{grid-template-columns:1fr}.ticket-journey-item+.ticket-journey-item{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.ticket-section-head h2{font-size:42px}.ticket-type-row{grid-template-columns:45px 1fr}.ticket-type-price{grid-column:2}.ticket-qty{grid-column:1/-1;grid-row:auto;justify-self:end}.ticket-included-grid{grid-template-columns:1fr}.ticket-visit-copy{padding:31px}.ticket-modal-actions{grid-template-columns:1fr}}
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         PRELOADER
+    ========================================================== -->
+
+    <div class="preloader">
+
+        <div class="loader-ripple">
+            <div></div>
+            <div></div>
+        </div>
+
+    </div>
+
+
+    <div id="shopProgress"></div>
+
+
+    <!-- =========================================================
+         BIOWILD TOP BAR
+    ========================================================== -->
+
+    <div class="bio-topbar">
+
+        <div class="container">
+
+            <div class="bio-topbar-left">
+
+                <a href="mailto:biowild2026@outlook.com">
+                    <i class="far fa-envelope"></i>
+                    biowild2026@outlook.com
+                </a>
+
+                <a href="tel:+50761533665">
+                    <i class="far fa-phone"></i>
+                    +507 6153-3665
+                </a>
+
+            </div>
+
+            <div class="bio-topbar-right">
+
+                <span>
+                    <i class="far fa-clock"></i>
+                    Mon - Fri (08AM - 8PM)
+                </span>
+
+                <span>
+                    <i class="far fa-location-dot"></i>
+                    Panama, West Panama, Capira
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         BIOWILD HEADER
+    ========================================================== -->
+
+    <header class="bio-header">
+
+        <div class="container bio-nav">
+
+            <a class="bio-logo"
+                href="index.html">
+
+                <img src="assets/img/logo/logo.png"
+                    alt="BioWild Logo">
+
+            </a>
+
+
+            <ul class="bio-main-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+
+                    <a href="service-single.html">
+                        Services
+                    </a>
+
+                    <ul class="bio-dropdown">
+
+                        <li>
+                            <a href="service-single.html">
+                                Our Services
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+
+                    <a href="#"
+                        class="bio-dropdown-trigger">
+                        Pages
+                    </a>
+
+                    <ul class="bio-dropdown">
+
+                        <li>
+                            <a href="team.html">
+                                Our Team
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="gallery.html">
+                                Gallery
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pricing.html">
+                                Pricing Plan
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="terms.html">
+                                Terms Of Service
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+
+                    <a href="shop.html">
+                        Shop
+                    </a>
+
+                    <ul class="bio-dropdown">
+
+                        <li>
+                            <a href="shop.html">
+                                Shop
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="shop-checkout.html">
+                                Checkout
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="volunteering.html">
+                        Volunteering
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="bio-nav-actions">
+
+                <button
+                    class="bio-icon-btn search-box-outer"
+                    id="bioSearchOpen"
+                    type="button"
+                    aria-label="Search">
+
+                    <i class="far fa-search"></i>
+
+                </button>
+
+
+                <button
+                    class="bio-icon-btn"
+                    id="headerCartButton"
+                    type="button"
+                    aria-label="Open shopping bag">
+
+                    <i class="far fa-bag-shopping"></i>
+
+                    <span id="headerCartCount">
+                        0
+                    </span>
+
+                </button>
+
+
+                <a class="theme-btn bio-buy-btn"
+                    href="#ticket-builder">
+
+                    Buy a Ticket
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+
+                <button
+                    class="bio-icon-btn bio-mobile-toggle"
+                    id="mobileOpen"
+                    type="button"
+                    aria-label="Menu"
+                    aria-controls="mobileMenu"
+                    aria-expanded="false">
+
+                    <i class="far fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MOBILE MENU
+    ========================================================== -->
+
+    <div class="bio-mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true">
+
+        <button
+            class="bio-mobile-close"
+            id="mobileClose"
+            type="button"
+            aria-label="Close menu">
+
+            <i class="far fa-times"></i>
+
+        </button>
+
+        <ul class="mobile-menu-list">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="service-single.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="team.html">
+                    Our Team
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="pricing.html">
+                    Pricing Plan
+                </a>
+            </li>
+
+            <li>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <ul class="mobile-sub">
+
+                    <li>
+                        <a href="shop-checkout.html">
+                            Checkout
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="volunteering.html">
+                    Volunteering
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- =========================================================
+         SEARCH POPUP
+    ========================================================== -->
+
+    <div class="search-popup">
+
+
+        <button class="close-search"
+            type="button">
+
+            <span class="far fa-times"></span>
+
+        </button>
+
+
+        <form id="globalSearchForm">
+
+
+            <div class="form-group">
+
+
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Search BioWild..."
+                    required>
+
+
+                <button type="submit">
+
+                    <i class="far fa-search"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <div class="sidebar-popup">
+
+
+        <div class="sidebar-wrapper">
+
+
+            <div class="sidebar-content">
+
+
+                <button type="button"
+                    class="close-sidebar-popup">
+
+                    <i class="far fa-xmark"></i>
+
+                </button>
+
+
+                <div class="sidebar-logo">
+
+                    <img src="assets/img/logo/logo.png"
+                        alt="BioWild Logo">
+
+                </div>
+
+
+                <div class="sidebar-about">
+
+
+                    <h4>
+                        About BioWild
+                    </h4>
+
+
+                    <p>
+
+                        BioWild is a bird sanctuary in Panama dedicated to wildlife rescue, conservation, environmental education, ecotourism, and technology.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="sidebar-contact">
+
+
+                    <h4>
+                        Contact Info
+                    </h4>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <h6>
+                                Email
+                            </h6>
+
+                            <a href="mailto:biowild2026@outlook.com">
+
+                                <i class="far fa-envelope"></i>
+
+                                biowild2026@outlook.com
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <h6>
+                                Phone
+                            </h6>
+
+                            <a href="tel:+50761533665">
+
+                                <i class="far fa-phone"></i>
+
+                                +507 6153-3665
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <h6>
+                                Address
+                            </h6>
+
+                            <span>
+
+                                <i class="far fa-location-dot"></i>
+
+                                Panama, West Panama, Capira
+
+                            </span>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+                <div class="sidebar-social">
+
+
+                    <h4>
+                        Follow Us
+                    </h4>
+
+
+                    <a href="#"
+                        class="social-placeholder">
+
+                        <i class="fab fa-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="social-placeholder">
+
+                        <i class="fab fa-x-twitter"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="social-placeholder">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="social-placeholder">
+
+                        <i class="fab fa-linkedin"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+        <main class="main">
+
+        <!-- =====================================================
+             TICKET OPENING
+        ====================================================== -->
+        <section class="ticket-opening" id="ticket-top">
+            <div class="container">
+                <div class="ticket-opening-grid">
+
+                    <div class="ticket-opening-copy ticket-reveal">
+                        <div class="ticket-eyebrow">Plan Your BioWild Visit</div>
+                        <h1>Your ticket to <span>Panama's wild side.</span></h1>
+                        <p>
+                            Reserve your entrance to the BioWild Bird Sanctuary in Capira. Choose your visitors, date, arrival period, and contact details while your sanctuary pass updates in real time.
+                        </p>
+
+                        <div class="ticket-opening-actions">
+                            <a href="#ticket-builder" class="theme-btn">
+                                Build My Visit
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                            <a href="#visit-information" class="ticket-outline-btn">
+                                <i class="far fa-compass"></i>
+                                Visitor Information
+                            </a>
+                        </div>
+
+                        <div class="ticket-opening-notes">
+                            <span><i class="far fa-location-dot"></i> Capira, West Panama</span>
+                            <span><i class="far fa-envelope"></i> Reservation confirmation</span>
+                            <span><i class="fas fa-leaf"></i> Conservation experience</span>
+                        </div>
+                    </div>
+
+                    <!-- LIVE PASS -->
+                    <aside class="sanctuary-pass-wrap ticket-reveal" aria-label="Live BioWild sanctuary pass preview">
+                        <div class="sanctuary-pass">
+                            <div class="pass-main">
+                                <div class="pass-brand">
+                                    <div class="pass-brand-mark">
+                                        <div class="pass-brand-icon"><i class="fas fa-feather"></i></div>
+                                        <div>
+                                            <strong>BioWild</strong>
+                                            <small>Sanctuary Admission</small>
+                                        </div>
+                                    </div>
+                                    <span class="pass-status">Entrance Pass</span>
+                                </div>
+
+                                <div class="pass-route">
+                                    <div class="pass-point">
+                                        <small>From</small>
+                                        <strong>You</strong>
+                                    </div>
+                                    <div class="pass-line"><i class="fas fa-feather"></i></div>
+                                    <div class="pass-point">
+                                        <small>Destination</small>
+                                        <strong>BioWild</strong>
+                                    </div>
+                                </div>
+
+                                <div class="pass-details">
+                                    <div class="pass-detail">
+                                        <small>Visit Date</small>
+                                        <strong id="passDate">Select date</strong>
+                                    </div>
+                                    <div class="pass-detail">
+                                        <small>Arrival</small>
+                                        <strong id="passTime">Select time</strong>
+                                    </div>
+                                    <div class="pass-detail">
+                                        <small>Visitors</small>
+                                        <strong id="passGuests">0 guests</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pass-side">
+                                <div class="pass-side-content">
+                                    <div>
+                                        <i class="fas fa-dove"></i>
+                                        <small>Total</small>
+                                        <strong id="passTotal">$0.00</strong>
+                                    </div>
+                                    <div class="pass-bars" aria-hidden="true">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- JOURNEY -->
+        <section class="ticket-journey" aria-label="Ticket purchase steps">
+            <div class="container">
+                <div class="ticket-journey-grid">
+                    <div class="ticket-journey-item">
+                        <div class="ticket-journey-number">01</div>
+                        <div><strong>Choose Visitors</strong><span>Select your tickets</span></div>
+                    </div>
+                    <div class="ticket-journey-item">
+                        <div class="ticket-journey-number">02</div>
+                        <div><strong>Choose Your Day</strong><span>Select date & arrival</span></div>
+                    </div>
+                    <div class="ticket-journey-item">
+                        <div class="ticket-journey-number">03</div>
+                        <div><strong>Visitor Details</strong><span>Tell us who is coming</span></div>
+                    </div>
+                    <div class="ticket-journey-item">
+                        <div class="ticket-journey-number">04</div>
+                        <div><strong>Confirm Visit</strong><span>Send your reservation</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TICKET BUILDER
+        ====================================================== -->
+        <section class="ticket-builder" id="ticket-builder">
+            <div class="container">
+                <div class="ticket-section-head ticket-reveal">
+                    <div>
+                        <div class="ticket-section-label">Build Your Sanctuary Pass</div>
+                        <h2>Shape your day at BioWild.</h2>
+                    </div>
+                    <p>
+                        Choose the number of visitors, select when you want to arrive, and enter the lead visitor's information. Your reservation summary updates automatically.
+                    </p>
+                </div>
+
+                <div class="ticket-builder-layout">
+
+                    <div class="ticket-form-panel ticket-reveal">
+                        <form id="sanctuaryTicketForm">
+
+                            <!-- STEP 1 -->
+                            <section class="ticket-step">
+                                <div class="ticket-step-head">
+                                    <div class="ticket-step-number">01</div>
+                                    <div>
+                                        <small>Admission</small>
+                                        <h3>Who is visiting?</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ticket-types">
+                                    <div class="ticket-type-row">
+                                        <div class="ticket-type-icon"><i class="fas fa-user"></i></div>
+                                        <div class="ticket-type-copy">
+                                            <strong>General Admission</strong>
+                                            <span>Standard sanctuary entrance</span>
+                                        </div>
+                                        <div class="ticket-type-price">$10</div>
+                                        <div class="ticket-qty">
+                                            <button type="button" class="ticket-minus" data-ticket="adult" aria-label="Decrease general tickets"><i class="fas fa-minus"></i></button>
+                                            <span id="adultQty">0</span>
+                                            <button type="button" class="ticket-plus" data-ticket="adult" aria-label="Increase general tickets"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="ticket-type-row">
+                                        <div class="ticket-type-icon"><i class="fas fa-graduation-cap"></i></div>
+                                        <div class="ticket-type-copy">
+                                            <strong>Student Admission</strong>
+                                            <span>Student identification may be requested</span>
+                                        </div>
+                                        <div class="ticket-type-price">$7</div>
+                                        <div class="ticket-qty">
+                                            <button type="button" class="ticket-minus" data-ticket="student" aria-label="Decrease student tickets"><i class="fas fa-minus"></i></button>
+                                            <span id="studentQty">0</span>
+                                            <button type="button" class="ticket-plus" data-ticket="student" aria-label="Increase student tickets"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="ticket-type-row">
+                                        <div class="ticket-type-icon"><i class="fas fa-child"></i></div>
+                                        <div class="ticket-type-copy">
+                                            <strong>Child Admission</strong>
+                                            <span>Admission for younger visitors</span>
+                                        </div>
+                                        <div class="ticket-type-price">$5</div>
+                                        <div class="ticket-qty">
+                                            <button type="button" class="ticket-minus" data-ticket="child" aria-label="Decrease child tickets"><i class="fas fa-minus"></i></button>
+                                            <span id="childQty">0</span>
+                                            <button type="button" class="ticket-plus" data-ticket="child" aria-label="Increase child tickets"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- STEP 2 -->
+                            <section class="ticket-step">
+                                <div class="ticket-step-head">
+                                    <div class="ticket-step-number">02</div>
+                                    <div>
+                                        <small>Visit Schedule</small>
+                                        <h3>When are you coming?</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ticket-field">
+                                    <label for="visitDate">Visit Date *</label>
+                                    <input type="date" id="visitDate" required>
+                                </div>
+
+                                <div class="ticket-time-slots">
+                                    <button type="button" class="ticket-time-slot" data-time="Morning">
+                                        <strong>Morning</strong><span>Early arrival</span>
+                                    </button>
+                                    <button type="button" class="ticket-time-slot" data-time="Midday">
+                                        <strong>Midday</strong><span>Midday arrival</span>
+                                    </button>
+                                    <button type="button" class="ticket-time-slot" data-time="Afternoon">
+                                        <strong>Afternoon</strong><span>Later arrival</span>
+                                    </button>
+                                </div>
+                                <input type="hidden" id="visitTime" required>
+                            </section>
+
+                            <!-- STEP 3 -->
+                            <section class="ticket-step">
+                                <div class="ticket-step-head">
+                                    <div class="ticket-step-number">03</div>
+                                    <div>
+                                        <small>Lead Visitor</small>
+                                        <h3>Tell us who is coming.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ticket-field-grid">
+                                    <div class="ticket-field">
+                                        <label for="visitorName">Full Name *</label>
+                                        <input type="text" id="visitorName" autocomplete="name" placeholder="Your full name" required>
+                                    </div>
+                                    <div class="ticket-field">
+                                        <label for="visitorEmail">Email Address *</label>
+                                        <input type="email" id="visitorEmail" autocomplete="email" placeholder="you@example.com" required>
+                                    </div>
+                                    <div class="ticket-field">
+                                        <label for="visitorPhone">Phone Number *</label>
+                                        <input type="tel" id="visitorPhone" autocomplete="tel" placeholder="+507 ..." required>
+                                    </div>
+                                    <div class="ticket-field">
+                                        <label for="visitorCountry">Country</label>
+                                        <input type="text" id="visitorCountry" placeholder="Country">
+                                    </div>
+                                </div>
+
+                                <div class="ticket-field">
+                                    <label for="visitorNotes">Notes For BioWild</label>
+                                    <textarea id="visitorNotes" placeholder="Accessibility needs, group information, questions, or anything our team should know."></textarea>
+                                </div>
+                            </section>
+
+                            <!-- STEP 4 -->
+                            <section class="ticket-step">
+                                <div class="ticket-step-head">
+                                    <div class="ticket-step-number">04</div>
+                                    <div>
+                                        <small>Confirmation</small>
+                                        <h3>Choose how to complete your visit.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ticket-methods">
+                                    <label class="ticket-method active" id="payAtSanctuaryMethod">
+                                        <input type="radio" name="paymentMethod" value="Pay at sanctuary" checked>
+                                        <span class="ticket-method-icon"><i class="fas fa-ticket-alt"></i></span>
+                                        <strong>Confirm Reservation</strong>
+                                        <span>BioWild receives your request and follows up with the next steps.</span>
+                                    </label>
+
+                                    <div class="ticket-method disabled" aria-disabled="true">
+                                        <span class="ticket-method-icon"><i class="fas fa-credit-card"></i></span>
+                                        <strong>Online Payment</strong>
+                                        <span>Connect a secure payment provider when your payment gateway is ready.</span>
+                                    </div>
+                                </div>
+
+                                <label class="ticket-consent">
+                                    <input type="checkbox" id="ticketConsent" required>
+                                    <span>
+                                        I confirm that the information provided is correct and I agree to BioWild's
+                                        <a href="terms.html">Terms Of Service</a> and
+                                        <a href="privacy.html">Privacy Policy</a>.
+                                    </span>
+                                </label>
+                            </section>
+
+                        </form>
+                    </div>
+
+                    <!-- SUMMARY -->
+                    <aside class="ticket-summary ticket-reveal">
+                        <div class="ticket-summary-image">
+                            <img src="assets/img/breadcrumb/01.jpg" alt="BioWild Bird Sanctuary in Panama">
+                            <div class="ticket-summary-destination">
+                                <small>Destination</small>
+                                <strong>BioWild · Capira</strong>
+                            </div>
+                        </div>
+
+                        <div class="ticket-summary-body">
+                            <h3 class="ticket-summary-title">Your Visit</h3>
+
+                            <div class="ticket-summary-row">
+                                <span>Date</span>
+                                <strong id="summaryDate">Not selected</strong>
+                            </div>
+                            <div class="ticket-summary-row">
+                                <span>Arrival</span>
+                                <strong id="summaryTime">Not selected</strong>
+                            </div>
+                            <div class="ticket-summary-row">
+                                <span>Location</span>
+                                <strong>Capira, West Panama</strong>
+                            </div>
+
+                            <div class="ticket-summary-list" id="summaryTickets">
+                                <div class="ticket-summary-empty">Select at least one ticket.</div>
+                            </div>
+
+                            <div class="ticket-summary-total">
+                                <div>
+                                    <small>Estimated Total</small>
+                                    <strong id="summaryTotal">$0.00</strong>
+                                </div>
+                                <div class="ticket-summary-count" id="summaryCount">0 visitors</div>
+                            </div>
+
+                            <button type="button" class="ticket-confirm-btn" id="reviewReservation">
+                                <span>Review Reservation</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+
+                            <div class="ticket-summary-note">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>This page does not charge a card. Online payment can be connected later through a secure payment provider.</span>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             WHAT'S INCLUDED
+        ====================================================== -->
+        <section class="ticket-included" id="ticket-included">
+            <div class="container">
+                <div class="ticket-section-head ticket-reveal">
+                    <div>
+                        <div class="ticket-section-label">Your BioWild Day</div>
+                        <h2>More than just an entrance.</h2>
+                    </div>
+                    <p>
+                        A visit connects you directly with BioWild's conservation mission and gives you a closer look at Panama's remarkable birdlife, habitats, education, and responsible ecotourism.
+                    </p>
+                </div>
+
+                <div class="ticket-included-grid">
+                    <article class="ticket-included-card ticket-reveal">
+                        <div class="ticket-included-icon"><i class="fas fa-dove"></i></div>
+                        <small>Discover</small>
+                        <h3>Bird Sanctuary</h3>
+                        <p>Explore a space dedicated to rescued birds, wildlife protection, rehabilitation, and conservation.</p>
+                    </article>
+                    <article class="ticket-included-card ticket-reveal">
+                        <div class="ticket-included-icon"><i class="fas fa-binoculars"></i></div>
+                        <small>Observe</small>
+                        <h3>Birdwatching</h3>
+                        <p>Discover Panama's birdlife and experience responsible observation in a conservation-focused environment.</p>
+                    </article>
+                    <article class="ticket-included-card ticket-reveal">
+                        <div class="ticket-included-icon"><i class="fas fa-book-open"></i></div>
+                        <small>Learn</small>
+                        <h3>Environmental Education</h3>
+                        <p>Learn about biodiversity, habitats, conservation threats, and the importance of protecting birds.</p>
+                    </article>
+                    <article class="ticket-included-card ticket-reveal">
+                        <div class="ticket-included-icon"><i class="fas fa-leaf"></i></div>
+                        <small>Support</small>
+                        <h3>Conservation</h3>
+                        <p>Your visit supports a sanctuary built around wildlife rescue, education, habitat care, and public awareness.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             VISITOR INFORMATION
+        ====================================================== -->
+        <section class="ticket-visit-info" id="visit-information">
+            <div class="container">
+                <div class="ticket-visit-board ticket-reveal">
+                    <div class="ticket-visit-image">
+                        <img src="assets/img/blog/02.jpg" alt="Nature at BioWild in Capira, Panama">
+                    </div>
+                    <div class="ticket-visit-copy">
+                        <div class="ticket-section-label">Before You Visit</div>
+                        <h2>Your destination is Capira.</h2>
+                        <p>
+                            BioWild is located in West Panama, Capira. After your reservation request is reviewed, our team can provide the details you need before arriving at the sanctuary.
+                        </p>
+
+                        <div class="ticket-visit-list">
+                            <div class="ticket-visit-item">
+                                <i class="far fa-location-dot"></i>
+                                <div><small>Location</small><strong>Capira, West Panama, Panama</strong></div>
+                            </div>
+                            <div class="ticket-visit-item">
+                                <i class="far fa-phone"></i>
+                                <div><small>Phone</small><a href="tel:+50761533665">+507 6153-3665</a></div>
+                            </div>
+                            <div class="ticket-visit-item">
+                                <i class="far fa-envelope"></i>
+                                <div><small>Email</small><a href="mailto:biowild2026@outlook.com">biowild2026@outlook.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+         RESERVATION REVIEW MODAL
+    ========================================================== -->
+    <div class="ticket-modal" id="ticketModal" aria-hidden="true">
+        <div class="ticket-modal-card" role="dialog" aria-modal="true" aria-labelledby="ticketModalTitle">
+            <div class="ticket-modal-head">
+                <small>Final Review</small>
+                <h3 id="ticketModalTitle">Your BioWild reservation</h3>
+                <button type="button" class="ticket-modal-close" id="ticketModalClose" aria-label="Close review"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="ticket-modal-body">
+                <div class="ticket-modal-summary" id="ticketModalSummary"></div>
+                <p class="ticket-modal-message">
+                    BioWild does not currently charge cards directly on this page. Sending the reservation opens your email application with the visit details prepared for the BioWild team.
+                </p>
+                <div class="ticket-modal-actions">
+                    <button type="button" class="ticket-modal-secondary" id="ticketModalBack"><i class="fas fa-arrow-left"></i> Edit Visit</button>
+                    <button type="button" class="ticket-modal-primary" id="sendTicketRequest">Send Reservation <i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-toast" id="ticketToast"></div>
+
+<footer class="footer-area">
+
+
+        <div class="footer-widget">
+
+
+            <div class="container">
+
+
+                <div class="row footer-widget-wrapper pt-100 pb-70">
+
+
+                    <!-- ABOUT -->
+
+                    <div class="col-md-6 col-lg-4">
+
+
+                        <div class="footer-widget-box about-us">
+
+
+                            <a href="index.html"
+                                class="footer-logo">
+
+                                <img src="assets/img/logo/logo-light.png"
+                                    alt="BioWild Logo">
+
+                            </a>
+
+
+                            <p class="mb-3">
+
+                                BioWild is a bird sanctuary in Panama dedicated to wildlife rescue, conservation, environmental education, ecotourism, and innovative technology.
+
+                            </p>
+
+
+                            <ul class="footer-contact">
+
+
+                                <li>
+
+                                    <a href="tel:+50761533665">
+
+                                        <i class="far fa-phone"></i>
+
+                                        +507 6153-3665
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <i class="far fa-map-marker-alt"></i>
+
+                                    Panama, West Panama, Capira
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="mailto:biowild2026@outlook.com">
+
+                                        <i class="far fa-envelope"></i>
+
+                                        biowild2026@outlook.com
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- QUICK LINKS -->
+
+                    <div class="col-md-6 col-lg-2">
+
+
+                        <div class="footer-widget-box list">
+
+
+                            <h4 class="footer-widget-title">
+
+                                Quick Links
+
+                            </h4>
+
+
+                            <ul class="footer-list">
+
+
+                                <li>
+
+                                    <a href="about.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        About Us
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="shop.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        BioWild Shop
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="volunteering.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Volunteer
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="pricing.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Pricing Plan
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="contact.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Contact Us
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="faq.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        FAQ
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- SERVICES -->
+
+                    <div class="col-md-6 col-lg-3">
+
+
+                        <div class="footer-widget-box list">
+
+
+                            <h4 class="footer-widget-title">
+
+                                Our Services
+
+                            </h4>
+
+
+                            <ul class="footer-list">
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Bird Rescue
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Wildlife Rehabilitation
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Birdwatching Tours
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Environmental Education
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Habitat Conservation
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="service-single.html">
+
+                                        <i class="fas fa-caret-right"></i>
+
+                                        Bird Research
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- NEWSLETTER -->
+
+                    <div class="col-md-6 col-lg-3">
+
+
+                        <div class="footer-widget-box list">
+
+
+                            <h4 class="footer-widget-title">
+
+                                Newsletter
+
+                            </h4>
+
+
+                            <div class="footer-newsletter">
+
+
+                                <p>
+
+                                    Subscribe to receive updates about conservation projects, merchandise, volunteer opportunities, and BioWild news.
+
+                                </p>
+
+
+                                <div class="subscribe-form">
+
+
+                                    <form id="newsletterForm">
+
+
+                                        <input
+                                            type="email"
+                                            id="newsletterEmail"
+                                            class="form-control"
+                                            placeholder="Your Email"
+                                            required>
+
+
+                                        <button
+                                            class="theme-btn"
+                                            type="submit">
+
+                                            Subscribe Now
+
+                                            <i class="far fa-paper-plane"></i>
+
+                                        </button>
+
+
+                                    </form>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="copyright">
+
+
+            <div class="container">
+
+
+                <div class="row">
+
+
+                    <div class="col-md-6 align-self-center">
+
+
+                        <p class="copyright-text">
+
+                            &copy; Copyright
+
+                            <span id="date"></span>
+
+                            <a href="index.html">
+
+                                BioWild
+
+                            </a>
+
+                            All Rights Reserved.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="col-md-6 align-self-center">
+
+
+                        <ul class="footer-social">
+
+
+                            <li>
+
+                                <a href="#"
+                                    class="social-placeholder"
+                                    aria-label="Facebook">
+
+                                    <i class="fab fa-facebook-f"></i>
+
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="#"
+                                    class="social-placeholder"
+                                    aria-label="X">
+
+                                    <i class="fab fa-x-twitter"></i>
+
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="#"
+                                    class="social-placeholder"
+                                    aria-label="Instagram">
+
+                                    <i class="fab fa-instagram"></i>
+
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="#"
+                                    class="social-placeholder"
+                                    aria-label="YouTube">
+
+                                    <i class="fab fa-youtube"></i>
+
+                                </a>
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+
+
+    <!-- =========================================================
+         SCROLL TOP
+    ========================================================== -->
+
+    <a href="#"
+        id="scroll-top">
+
+        <i class="far fa-arrow-up"></i>
+
+    </a>
+
+
+
+    <!-- =========================================================
+         BIOWILD SHARED HEADER ENGINE
+    ========================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                "use strict";
+
+                const mobileMenu =
+                    document.getElementById(
+                        "mobileMenu"
+                    );
+
+                const mobileOpen =
+                    document.getElementById(
+                        "mobileOpen"
+                    );
+
+                const mobileClose =
+                    document.getElementById(
+                        "mobileClose"
+                    );
+
+
+                function setMobileMenu(
+                    open
+                ) {
+
+                    if (
+                        !mobileMenu
+                    ) {
+                        return;
+                    }
+
+                    mobileMenu
+                        .classList
+                        .toggle(
+                            "open",
+                            open
+                        );
+
+                    mobileMenu
+                        .setAttribute(
+                            "aria-hidden",
+                            String(
+                                !open
+                            )
+                        );
+
+                    if (
+                        mobileOpen
+                    ) {
+
+                        mobileOpen
+                            .setAttribute(
+                                "aria-expanded",
+                                String(
+                                    open
+                                )
+                            );
+
+                    }
+
+                    document.body
+                        .classList
+                        .toggle(
+                            "bio-menu-open",
+                            open
+                        );
+
+                }
+
+
+                if (
+                    mobileOpen
+                ) {
+
+                    mobileOpen
+                        .addEventListener(
+                            "click",
+                            function () {
+
+                                setMobileMenu(
+                                    true
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                if (
+                    mobileClose
+                ) {
+
+                    mobileClose
+                        .addEventListener(
+                            "click",
+                            function () {
+
+                                setMobileMenu(
+                                    false
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                if (
+                    mobileMenu
+                ) {
+
+                    mobileMenu
+                        .querySelectorAll(
+                            "a"
+                        )
+                        .forEach(
+                            function (
+                                link
+                            ) {
+
+                                link.addEventListener(
+                                    "click",
+                                    function () {
+
+                                        setMobileMenu(
+                                            false
+                                        );
+
+                                    }
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                document
+                    .querySelectorAll(
+                        ".bio-dropdown-trigger"
+                    )
+                    .forEach(
+                        function (
+                            link
+                        ) {
+
+                            link.addEventListener(
+                                "click",
+                                function (
+                                    event
+                                ) {
+
+                                    event.preventDefault();
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                document.addEventListener(
+                    "keydown",
+                    function (
+                        event
+                    ) {
+
+                        if (
+                            event.key ===
+                            "Escape"
+                        ) {
+
+                            setMobileMenu(
+                                false
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+    <!-- =========================================================
+         JS LIBRARIES
+    ========================================================== -->
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="assets/js/modernizr.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <script src="assets/js/jquery.appear.min.js"></script>
+
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/counter-up.js"></script>
+
+    <script src="assets/js/jquery-ui.min.js"></script>
+
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+
+    
+    <!-- =========================================================
+         BIOWILD TICKET ENGINE
+    ========================================================== -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        "use strict";
+
+        const BIOWILD_EMAIL = "biowild2026@outlook.com";
+        const CART_KEY = "biowildCart";
+        const RESERVATION_KEY = "biowildTicketReservation";
+
+        /* =========================================================
+           EDITABLE TICKET PRICES
+           Change only these values when BioWild confirms pricing.
+        ========================================================== */
+        const TICKET_PRICES = { adult: 10, student: 7, child: 5 };
+        const TICKET_NAMES = { adult: "General Admission", student: "Student Admission", child: "Child Admission" };
+        const quantities = { adult: 0, student: 0, child: 0 };
+        let selectedTime = "";
+
+        const form = document.getElementById("sanctuaryTicketForm");
+        const visitDate = document.getElementById("visitDate");
+        const visitTime = document.getElementById("visitTime");
+        const toast = document.getElementById("ticketToast");
+        const modal = document.getElementById("ticketModal");
+
+        function showToast(message){
+            if(!toast) return;
+            toast.textContent = message;
+            toast.classList.add("show");
+            clearTimeout(showToast.timer);
+            showToast.timer = setTimeout(()=>toast.classList.remove("show"),2100);
+        }
+
+        /* Preserve the theme's exact green */
+        const themeBtn = document.querySelector(".theme-btn");
+        if(themeBtn){
+            const c = getComputedStyle(themeBtn).backgroundColor;
+            const rgb = c.match(/\d+/g);
+            if(rgb && rgb.length >= 3){
+                document.documentElement.style.setProperty("--ticket-green", c);
+                document.documentElement.style.setProperty("--ticket-green-rgb", `${rgb[0]},${rgb[1]},${rgb[2]}`);
+            }
+        }
+
+        /* Reuse the page progress bar from the shared page shell */
+        const progress = document.getElementById("shopProgress");
+        function updateProgress(){
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            const ratio = max > 0 ? window.scrollY / max : 0;
+            if(progress) progress.style.width = `${Math.max(0,Math.min(1,ratio))*100}%`;
+        }
+        window.addEventListener("scroll", updateProgress, {passive:true});
+        updateProgress();
+
+        /* Reveals */
+        const revealItems = document.querySelectorAll(".ticket-reveal");
+        if("IntersectionObserver" in window){
+            const observer = new IntersectionObserver(entries=>{
+                entries.forEach(entry=>{
+                    if(!entry.isIntersecting) return;
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                });
+            },{threshold:.1});
+            revealItems.forEach(el=>observer.observe(el));
+        } else {
+            revealItems.forEach(el=>el.classList.add("visible"));
+        }
+
+        /* Minimum date = today */
+        if(visitDate){
+            const now = new Date();
+            const yyyy = now.getFullYear();
+            const mm = String(now.getMonth()+1).padStart(2,"0");
+            const dd = String(now.getDate()).padStart(2,"0");
+            visitDate.min = `${yyyy}-${mm}-${dd}`;
+        }
+
+        function visitorCount(){ return quantities.adult + quantities.student + quantities.child; }
+        function totalPrice(){
+            return quantities.adult*TICKET_PRICES.adult + quantities.student*TICKET_PRICES.student + quantities.child*TICKET_PRICES.child;
+        }
+        function formatDate(value){
+            if(!value) return "Not selected";
+            const d = new Date(value + "T12:00:00");
+            return d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+        }
+
+        function renderTicketSummary(){
+            const count = visitorCount();
+            const total = totalPrice();
+            const dateText = visitDate && visitDate.value ? formatDate(visitDate.value) : "Not selected";
+            const timeText = selectedTime || "Not selected";
+
+            const passDate = document.getElementById("passDate");
+            const passTime = document.getElementById("passTime");
+            const passGuests = document.getElementById("passGuests");
+            const passTotal = document.getElementById("passTotal");
+            if(passDate) passDate.textContent = visitDate && visitDate.value ? dateText : "Select date";
+            if(passTime) passTime.textContent = selectedTime || "Select time";
+            if(passGuests) passGuests.textContent = `${count} ${count===1?"guest":"guests"}`;
+            if(passTotal) passTotal.textContent = `$${total.toFixed(2)}`;
+
+            document.getElementById("summaryDate").textContent = dateText;
+            document.getElementById("summaryTime").textContent = timeText;
+            document.getElementById("summaryTotal").textContent = `$${total.toFixed(2)}`;
+            document.getElementById("summaryCount").textContent = `${count} ${count===1?"visitor":"visitors"}`;
+
+            const list = document.getElementById("summaryTickets");
+            const active = Object.keys(quantities).filter(k=>quantities[k] > 0);
+            if(!active.length){
+                list.innerHTML = '<div class="ticket-summary-empty">Select at least one ticket.</div>';
+                return;
+            }
+            list.innerHTML = "";
+            active.forEach(key=>{
+                const row = document.createElement("div");
+                row.className = "ticket-summary-item";
+                row.innerHTML = `<span>${quantities[key]} × ${TICKET_NAMES[key]}</span><strong>$${(quantities[key]*TICKET_PRICES[key]).toFixed(2)}</strong>`;
+                list.appendChild(row);
+            });
+        }
+
+        function changeQuantity(type, amount){
+            if(!(type in quantities)) return;
+            quantities[type] = Math.max(0, Math.min(20, quantities[type] + amount));
+            const output = document.getElementById(`${type}Qty`);
+            if(output) output.textContent = quantities[type];
+            renderTicketSummary();
+        }
+        document.querySelectorAll(".ticket-plus").forEach(btn=>btn.addEventListener("click",()=>changeQuantity(btn.dataset.ticket,1)));
+        document.querySelectorAll(".ticket-minus").forEach(btn=>btn.addEventListener("click",()=>changeQuantity(btn.dataset.ticket,-1)));
+
+        document.querySelectorAll(".ticket-time-slot").forEach(slot=>{
+            slot.addEventListener("click",function(){
+                document.querySelectorAll(".ticket-time-slot").forEach(s=>s.classList.remove("active"));
+                this.classList.add("active");
+                selectedTime = this.dataset.time;
+                if(visitTime) visitTime.value = selectedTime;
+                renderTicketSummary();
+            });
+        });
+        if(visitDate) visitDate.addEventListener("change", renderTicketSummary);
+
+        function buildReservation(){
+            return {
+                tickets:{...quantities},
+                date:visitDate.value,
+                time:selectedTime,
+                visitor:{
+                    name:document.getElementById("visitorName").value.trim(),
+                    email:document.getElementById("visitorEmail").value.trim(),
+                    phone:document.getElementById("visitorPhone").value.trim(),
+                    country:document.getElementById("visitorCountry").value.trim()
+                },
+                notes:document.getElementById("visitorNotes").value.trim(),
+                method:"Confirm reservation",
+                visitors:visitorCount(),
+                total:totalPrice()
+            };
+        }
+
+        function validateReservation(){
+            if(visitorCount() < 1){
+                showToast("Choose at least one ticket.");
+                document.querySelector(".ticket-types")?.scrollIntoView({behavior:"smooth",block:"center"});
+                return false;
+            }
+            if(!visitDate.value){ showToast("Choose your visit date."); visitDate.focus(); return false; }
+            if(!selectedTime){ showToast("Choose an arrival period."); return false; }
+            if(!form.checkValidity()){ form.reportValidity(); return false; }
+            return true;
+        }
+
+        function openModal(){
+            if(!validateReservation()) return;
+            const r = buildReservation();
+            localStorage.setItem(RESERVATION_KEY, JSON.stringify(r));
+            const ticketText = Object.keys(quantities).filter(k=>quantities[k]>0).map(k=>`${quantities[k]} × ${TICKET_NAMES[k]}`).join(", ");
+            document.getElementById("ticketModalSummary").innerHTML = `
+                <div class="ticket-modal-summary-row"><span>Visitor</span><strong>${escapeHTML(r.visitor.name)}</strong></div>
+                <div class="ticket-modal-summary-row"><span>Date</span><strong>${escapeHTML(formatDate(r.date))}</strong></div>
+                <div class="ticket-modal-summary-row"><span>Arrival</span><strong>${escapeHTML(r.time)}</strong></div>
+                <div class="ticket-modal-summary-row"><span>Tickets</span><strong>${escapeHTML(ticketText)}</strong></div>
+                <div class="ticket-modal-summary-row"><span>Contact</span><strong>${escapeHTML(r.visitor.email)}</strong></div>
+                <div class="ticket-modal-total"><span>Estimated total</span><strong>$${r.total.toFixed(2)}</strong></div>`;
+            modal.classList.add("show");
+            modal.setAttribute("aria-hidden","false");
+            document.body.classList.add("ticket-modal-open");
+        }
+        function closeModal(){
+            modal.classList.remove("show");
+            modal.setAttribute("aria-hidden","true");
+            document.body.classList.remove("ticket-modal-open");
+        }
+
+        function escapeHTML(value){
+            return String(value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+        }
+
+        document.getElementById("reviewReservation")?.addEventListener("click", openModal);
+        document.getElementById("ticketModalClose")?.addEventListener("click", closeModal);
+        document.getElementById("ticketModalBack")?.addEventListener("click", closeModal);
+        modal?.addEventListener("click",e=>{ if(e.target === modal) closeModal(); });
+
+        document.getElementById("sendTicketRequest")?.addEventListener("click",function(){
+            if(!validateReservation()) return;
+            const r = buildReservation();
+            localStorage.setItem(RESERVATION_KEY, JSON.stringify(r));
+            const ticketLines = Object.keys(quantities).filter(k=>quantities[k]>0).map(k=>`${quantities[k]} x ${TICKET_NAMES[k]} ($${(quantities[k]*TICKET_PRICES[k]).toFixed(2)})`).join("\n");
+            const subject = `BioWild Sanctuary Ticket Request - ${r.visitor.name}`;
+            const body =
+`Hello BioWild Team,\n\nI would like to reserve my entrance tickets to the BioWild Bird Sanctuary.\n\nVISITOR\nName: ${r.visitor.name}\nEmail: ${r.visitor.email}\nPhone: ${r.visitor.phone}\nCountry: ${r.visitor.country || "Not provided"}\n\nVISIT\nDate: ${formatDate(r.date)}\nArrival: ${r.time}\n\nTICKETS\n${ticketLines}\n\nVisitors: ${r.visitors}\nEstimated total: $${r.total.toFixed(2)}\n\nNotes:\n${r.notes || "No additional notes."}\n\nPlease contact me with the next steps to confirm the reservation and payment.\n\nThank you.`;
+            showToast("Opening your reservation email...");
+            setTimeout(()=>{ window.location.href = `mailto:${BIOWILD_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; },300);
+        });
+
+        /* Header cart counter + button keeps the shared header functional */
+        function updateHeaderCart(){
+            const counter = document.getElementById("headerCartCount");
+            if(!counter) return;
+            try{
+                const cart = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+                const count = Array.isArray(cart) ? cart.reduce((sum,item)=>sum+(Number(item.quantity)||0),0) : 0;
+                counter.textContent = count;
+            }catch(e){ counter.textContent = "0"; }
+        }
+        updateHeaderCart();
+        window.addEventListener("storage",e=>{ if(e.key===CART_KEY) updateHeaderCart(); });
+        document.getElementById("headerCartButton")?.addEventListener("click",()=>{ window.location.href="shop-checkout.html"; });
+
+        /* Header Buy Ticket stays on this page */
+        const buyTicketButton = document.querySelector(".bio-buy-btn");
+        if(buyTicketButton) buyTicketButton.setAttribute("href","#ticket-builder");
+
+        /* Search */
+        const searchForm = document.getElementById("globalSearchForm");
+        const searchInput = document.getElementById("globalSearchInput");
+        if(searchInput) searchInput.placeholder = "Search BioWild...";
+        if(searchForm && searchInput){
+            searchForm.addEventListener("submit",function(e){
+                e.preventDefault();
+                const q = searchInput.value.trim().toLowerCase();
+                if(!q) return;
+                const local = [
+                    {words:["ticket","visit","reservation","admission","entrance"],target:"#ticket-builder"},
+                    {words:["location","capira","hours","visitor"],target:"#visit-information"},
+                    {words:["shop","store"],target:"shop.html"},
+                    {words:["volunteer"],target:"volunteering.html"},
+                    {words:["service"],target:"service-single.html"},
+                    {words:["contact"],target:"contact.html"},
+                    {words:["about"],target:"about.html"},
+                    {words:["gallery","birds"],target:"gallery.html"}
+                ];
+                const match = local.find(item=>item.words.some(word=>q.includes(word)));
+                document.body.classList.remove("search-active");
+                if(!match){ showToast("No related BioWild page found."); return; }
+                if(match.target.startsWith("#")) document.querySelector(match.target)?.scrollIntoView({behavior:"smooth"});
+                else window.location.href = match.target;
+            });
+        }
+
+        /* Footer newsletter */
+        const newsletterForm = document.getElementById("newsletterForm");
+        const newsletterEmail = document.getElementById("newsletterEmail");
+        if(newsletterForm && newsletterEmail){
+            newsletterForm.addEventListener("submit",function(e){
+                e.preventDefault();
+                if(!newsletterForm.checkValidity()){ newsletterForm.reportValidity(); return; }
+                const subject="BioWild Newsletter Subscription";
+                const body=`Hello BioWild Team,\n\nI would like to subscribe to the BioWild newsletter.\n\nEmail: ${newsletterEmail.value.trim()}`;
+                window.location.href=`mailto:${BIOWILD_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            });
+        }
+
+        document.querySelectorAll(".social-placeholder").forEach(link=>link.addEventListener("click",e=>{e.preventDefault();showToast("BioWild social profile coming soon.");}));
+        const year = document.getElementById("date"); if(year) year.textContent = new Date().getFullYear();
+        document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeModal(); });
+
+        renderTicketSummary();
+    });
+    </script>
+
+
+</body>
+
+</html>
