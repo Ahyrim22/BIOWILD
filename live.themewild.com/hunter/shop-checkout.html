@@ -4823,8 +4823,8 @@
 
         .checkout-track-step.active .checkout-track-num,
         .checkout-track-step.done .checkout-track-num {
-            color: #fff;
-            background: var(--shop-green);
+            color: var(--shop-muted);
+            background: var(--shop-paper);
         }
 
         .checkout-track-step strong {
@@ -6047,15 +6047,15 @@
         }
 
         .checkout-track-step.done .checkout-track-num {
-            border-color: var(--shop-green);
-            color: #fff;
-            background: var(--shop-green);
+            border-color: transparent;
+            color: var(--shop-muted);
+            background: var(--shop-paper);
         }
 
         .checkout-track-step.active .checkout-track-num {
             border-color: var(--shop-dark);
             color: #fff;
-            background: var(--shop-dark);
+            background: #17331f;
         }
 
         .checkout-area {
@@ -7335,9 +7335,7 @@
             <div class="checkout-track shop-reveal">
 
                 <div class="checkout-track-step done" data-track="bag">
-                    <span class="checkout-track-num">
-                        <i class="fas fa-check"></i>
-                    </span>
+                    <div class="checkout-track-num">01</div>
                     <div>
                         <strong>Your Bag</strong>
                         <span>Review products</span>
@@ -7345,7 +7343,7 @@
                 </div>
 
                 <div class="checkout-track-step active" data-track="details">
-                    <span class="checkout-track-num">02</span>
+                    <div class="checkout-track-num">02</div>
                     <div>
                         <strong>Your Details</strong>
                         <span>Contact information</span>
@@ -7353,7 +7351,7 @@
                 </div>
 
                 <div class="checkout-track-step" data-track="delivery">
-                    <span class="checkout-track-num">03</span>
+                    <div class="checkout-track-num">03</div>
                     <div>
                         <strong>Fulfillment</strong>
                         <span>Pickup or delivery</span>
@@ -7361,7 +7359,7 @@
                 </div>
 
                 <div class="checkout-track-step" data-track="review">
-                    <span class="checkout-track-num">04</span>
+                    <div class="checkout-track-num">04</div>
                     <div>
                         <strong>Review</strong>
                         <span>Send order request</span>
@@ -7436,7 +7434,7 @@
                                 </span>
 
                                 <div>
-                                    <small>01 · Your Bag</small>
+                                    <small>01  Your Bag</small>
                                     <h3>Review your selection</h3>
                                 </div>
                             </div>
@@ -9482,9 +9480,7 @@
                     const number = step.querySelector(".checkout-track-num");
 
                     if (number) {
-                        number.innerHTML = done
-                            ? '<i class="fas fa-check"></i>'
-                            : String(index + 1).padStart(2, "0");
+                        number.textContent = String(index + 1).padStart(2, "0");
                     }
                 });
             }
